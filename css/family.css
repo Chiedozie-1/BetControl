@@ -1,0 +1,553 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #2C3E50;
+    /* overflow-x: hidden; */
+}
+
+.btn-get-started {
+    background: #1e3a5f;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn-get-started:hover {
+    background: #152d4a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.3);
+}
+
+.btn-login {
+    color: #1e3a5f;
+    padding: 0.6rem 1.5rem;
+    border: 2px solid #1e3a5f;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-left: 1rem;
+    background: white;
+    transition: all 0.3s;
+}
+
+.btn-login:hover {
+    background: #1e3a5f;
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 6rem 0 5rem;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fffe 100%);
+    text-align: center;
+}
+
+.assurance-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    color: #6B7280;
+}
+
+.assurance-badge i {
+    color: #1e3a5f;
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: #1e3a5f;
+}
+
+.hero-title-second {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #7AD196;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    color: #6B7280;
+    margin-bottom: 3rem;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary-hero {
+    background: #1e3a5f;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    font-size: 1.05rem;
+    transition: all 0.3s;
+}
+
+.btn-primary-hero:hover {
+    background: #152d4a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 58, 95, 0.3);
+}
+
+.btn-secondary-hero {
+    background: white;
+    color: #1e3a5f;
+    padding: 1rem 2rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.3s;
+}
+
+.btn-secondary-hero:hover {
+    border-color: #1e3a5f;
+    background: #f8fffe;
+}
+
+/* We Know Your Situation Section */
+.situation-section {
+    padding: 5rem 0;
+    background: #1e3a5f;
+    color: white;
+}
+
+.section-label {
+    color: #7AD196;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+}
+
+.situation-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s;
+}
+
+.situation-card:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-5px);
+}
+
+.situation-icon {
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    margin: 0 auto 1.5rem;
+}
+
+.situation-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.situation-description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* How You Can Help Section */
+.help-section {
+    padding: 6rem 0;
+    background: white;
+}
+
+.help-label {
+    color: #7AD196;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.help-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e3a5f;
+    margin-bottom: 4rem;
+}
+
+.help-card {
+    background: #fafafa;
+    border-radius: 15px;
+    padding: 2.5rem 2rem;
+    height: 100%;
+}
+
+.help-icon {
+    width: 50px;
+    height: 50px;
+    background: #e8f5e9;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7AD196;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.help-card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1e3a5f;
+    margin-bottom: 1.5rem;
+}
+
+.help-card-description {
+    color: #6B7280;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.help-list {
+    list-style: none;
+    padding: 0;
+}
+
+.help-list li {
+    color: #6B7280;
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.help-list li:before {
+    content: '○';
+    position: absolute;
+    left: 0;
+    color: #7AD196;
+}
+
+/* Compassionate Approach Section */
+.approach-section {
+    padding: 6rem 0;
+    background: #fafafa;
+}
+
+.approach-label {
+    color: #7AD196;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.approach-title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #1e3a5f;
+    margin-bottom: 1.5rem;
+}
+
+.approach-subtitle {
+    color: #6B7280;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+.approach-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.approach-icon {
+    width: 28px;
+    height: 28px;
+    background: #e8f5e9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7AD196;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.approach-text {
+    color: #6B7280;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.image-placeholder {
+    background: linear-gradient(135deg, #d0d0d0 0%, #e8e8e8 100%);
+    border-radius: 15px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 1.1rem;
+}
+
+/* Final CTA Section */
+.final-cta-section {
+    padding: 5rem 0;
+    background: #1e3a5f;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.final-cta-section::before {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+.final-cta-section::after {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -5%;
+    width: 400px;
+    height: 400px;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+.cta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.cta-badge i {
+    color: #7AD196;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.cta-text {
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-cta-green {
+    background: #7AD196;
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    font-size: 1.05rem;
+    transition: all 0.3s;
+}
+
+.btn-cta-green:hover {
+    background: #4eba69;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(93, 204, 124, 0.4);
+}
+
+/* Footer */
+.footer {
+    padding: 4rem 0 2rem;
+    background: white;
+    border-top: 1px solid #e5e7eb;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #1e3a5f;
+    margin-bottom: 2rem;
+}
+
+.footer-brand i {
+    color: #1e3a5f;
+    font-size: 1.5rem;
+}
+
+.footer-title {
+    font-weight: 700;
+    color: #1e3a5f;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: #6B7280;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #7AD196;
+}
+
+.social-title {
+    font-weight: 600;
+    color: #1e3a5f;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: #f3f4f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1e3a5f;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    background: #7AD196;
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 3rem;
+    border-top: 1px solid #e5e7eb;
+    color: #6B7280;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title,
+    .hero-title-second {
+        font-size: 2.5rem;
+    }
+
+    .section-title,
+    .help-title,
+    .approach-title,
+    .cta-title {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn-login {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }

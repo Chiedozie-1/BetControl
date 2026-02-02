@@ -1,0 +1,59 @@
+/**** 	   01. header sticky animation  	 ****/
+@keyframes fadeInSticky {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/**** 	   04. Hero-icon animation  	 ****/
+.hero-icon i {
+    transition: transform 0.3s ease;
+}
+
+.hero-icon:hover i {
+    transform: rotate(-20deg) translateY(-2px);
+}
+@keyframes unlock {
+  0%   { transform: rotate(0); }
+  30%  { transform: rotate(-25deg); }
+  100% { transform: rotate(0); }
+}
+
+.hero-icon:hover i {
+  animation: unlock 0.6s ease;
+}
+
+/**** 	   05. Testimonial card animation  	 ****/
+@keyframes layeredCardFade {
+  0% {
+    transform: translateY(20px) scale(0.92);
+    opacity: 0.3;
+    z-index: 1;
+  }
+  10% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+    z-index: 3;
+  }
+  35% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+    z-index: 3;
+  }
+  50% {
+    transform: translateY(-20px) scale(0.92);
+    opacity: 0.3;
+    z-index: 1;
+  }
+  100% {
+    transform: translateY(-20px) scale(0.92);
+    opacity: 0.3;
+    z-index: 1;
+  }
+}
+
