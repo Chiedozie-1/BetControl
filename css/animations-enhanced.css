@@ -72,3 +72,9 @@
 @media (min-width: 600px) and (max-width: 1024px) {
   .stat-number { font-size: 2.8rem; }
 }
+
+/* Prevent page scroll when an offcanvas is open */
+body.no-scroll, html.no-scroll {
+  overflow: hidden !important;
+  height: 100vh !important;
+}

@@ -119,6 +119,56 @@ document.addEventListener("DOMContentLoaded", function () {
           el.classList.remove("hero-cta-pulse");
         });
     }
+
+    // Prevent body scrolling when Bootstrap offcanvas is open.
+    (function handleOffcanvasNoScroll() {
+      const body = document.body;
+      function setNoScroll(on) {
+        if (on) {
+          body.classList.add("no-scroll");
+          document.documentElement.classList.add("no-scroll");
+        } else {
+          body.classList.remove("no-scroll");
+          document.documentElement.classList.remove("no-scroll");
+        }
+      }
+
+      // If Bootstrap is available, listen to its events
+      try {
+        const offcanvasEls = Array.from(
+          document.querySelectorAll(".offcanvas"),
+        );
+        if (offcanvasEls.length) {
+          offcanvasEls.forEach((el) => {
+            el.addEventListener("shown.bs.offcanvas", () => setNoScroll(true));
+            el.addEventListener("hidden.bs.offcanvas", () =>
+              setNoScroll(false),
+            );
+          });
+
+          // Fallback: observe class changes on offcanvas elements
+          const mo = new MutationObserver((records) => {
+            records.forEach((r) => {
+              const target = r.target;
+              if (target.classList && target.classList.contains("show")) {
+                setNoScroll(true);
+              } else {
+                // if any offcanvas still has show, keep no-scroll
+                const anyShow = offcanvasEls.some((o) =>
+                  o.classList.contains("show"),
+                );
+                setNoScroll(anyShow);
+              }
+            });
+          });
+          offcanvasEls.forEach((o) =>
+            mo.observe(o, { attributes: true, attributeFilter: ["class"] }),
+          );
+        }
+      } catch (e) {
+        // silent
+      }
+    })();
   } catch (err) {
     console.error("animations.js error", err);
   }
