@@ -268,8 +268,8 @@ body{
 
 header.main-header {
     position: relative;
-    z-index: 1500;
-    background: var(--white-color);
+    /* z-index: 1500; */
+    /* background: var(--white-color); */
     margin: 20px ;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
@@ -303,7 +303,7 @@ header.main-header.sticky {
 }
 
 .main-menu .nav-menu-wrapper{
-	flex: 1;
+	flex:1;
 	text-align: left;
 	margin-left: 40px;
 }
@@ -1423,88 +1423,186 @@ header.main-header.sticky {
         .delay-4 { animation-delay: 0.4s; }
 
 
-        /* Offcanvas Styling */
+/* ===============================
+   OFFCANVAS BASE
+================================= */
 .offcanvas {
-    background-color: #1A3B5D;
-    color: white; 
-    padding: 20px;
-    z-index: 1050; 
+    background: linear-gradient(180deg, #0F2B46 0%, #1A3B5D 100%);
+    color: #ffffff;
+    padding: 30px 25px;
+    width: 320px !important;
+    backdrop-filter: blur(20px);
+    box-shadow: -10px 0 40px rgba(0,0,0,0.4);
 }
+
+/* Header */
 .offcanvas-header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 20px;
 }
+
 .offcanvas-title img {
-    max-width: 150px; 
+    max-width: 140px;
 }
-.offcanvas-body ul {
-    padding: 0;
-    margin: 0;
+
+/* Close Button */
+.btn-close {
+    filter: invert(1);
+    opacity: 0.8;
 }
-.offcanvas-body ul li {
-    margin-bottom: 15px; 
+
+.btn-close:hover {
+    opacity: 1;
 }
-.offcanvas-body ul li a {
-    font-size: 18px;
+
+/* ===============================
+   NAVIGATION LINKS
+================================= */
+
+.mobile-nav-menu {
+    margin-top: 25px;
+}
+
+.mobile-nav-item {
+    margin-bottom: 18px;
+}
+
+.mobile-nav-link {
+    font-size: 17px;
     font-weight: 500;
+    color: #ffffff;
     text-decoration: none;
-    color: white;
-    transition: color 0.3s ease;
-}
-.offcanvas-body ul li a:hover {
-   opacity: 0.5;
-}
-#offcanvas-icon i {
-    font-size: 24px;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
+    display: block;
+    padding: 10px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
-#offcanvas-icon i:hover {
-    opacity: 0.5; 
-} 
-.create-account-btn-offcanvas{
-    width: 194px;
-    height: 60px;
-    align-items: center;
-    background-color: #fff;
-    border: 1px solid #fff;
-    color: #1A3B5D;
-    border-radius: 5px;
-    box-shadow: 0px 0px 30px 0px #1A3B5D26;
-    cursor: pointer;
-}
-@media (max-width: 800px) {
-    .create-account-btn-offcanvas{
-        width: 304px;
-        height: 60px;
-    }
-}
-.create-account-btn-offcanvas:hover{
-    background-color: #1A3B5D; 
-    color: #ffff;
-    transition: background-color 0.3s ease; 
+.mobile-nav-link:hover {
+    background: rgba(255,255,255,0.08);
+    padding-left: 18px;
 }
 
-.cta-button-offcanvas{
-    width: 194px;
-    height: 60px;
-    align-items: center;
-    background-color: #fff;
-    border: 1px solid #fff;
-    color: #1A3B5D;
-    border-radius: 5px;
-    box-shadow: 0px 0px 30px 0px #1A3B5D26;
-    cursor: pointer;
+/* Chevron animation */
+.mobile-nav-link i {
+    transition: transform 0.3s ease;
 }
-@media (max-width: 800px) {
-    .cta-button-offcanvas{
-        width: 150px;
-        height: 60px;
+
+.mobile-nav-link[aria-expanded="true"] i {
+    transform: rotate(180deg);
+}
+
+/* Submenu */
+.mobile-nav-sublink {
+    display: block;
+    font-size: 15px;
+    padding: 8px 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-sublink:hover {
+    background: rgba(255,255,255,0.06);
+    padding-left: 15px;
+    color: #ffffff;
+}
+
+/* ===============================
+   ACTION BUTTONS
+================================= */
+
+.mobile-action-buttons {
+    margin-top: 35px;
+}
+
+/* Primary Button */
+.mobile-btn-primary {
+    width: 100%;
+    height: 55px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    background: #ffffff;
+    color: #1A3B5D;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.mobile-btn-primary:hover {
+    background: #e6e6e6;
+    transform: translateY(-2px);
+}
+
+/* Secondary Button */
+.mobile-btn-secondary {
+    width: 100%;
+    height: 55px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.mobile-btn-secondary:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* ===============================
+   SOCIAL ICONS
+================================= */
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #ffffff;
+    color: #1A3B5D;
+    transform: translateY(-3px);
+}
+
+/* ===============================
+   HELP SECTION
+================================= */
+
+.offcanvas .border-top {
+    border-color: rgba(255,255,255,0.1) !important;
+}
+
+.offcanvas .text-muted {
+    color: rgba(255,255,255,0.6) !important;
+}
+
+.offcanvas a.text-primary {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+.offcanvas a.text-primary:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 500px) {
+    .offcanvas {
+        width: 100% !important;
     }
 }
-.cta-button-offcanvas:hover {
-    background-color: #1A3B5D; 
-    color: #ffff;
-    transition: background-color 0.3s ease; 
-}
-/* offcanvas ends */

@@ -1,0 +1,74 @@
+/* Enhanced animations (self-hosted) */
+
+/* Floating icon */
+@keyframes floatY {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+.float {
+  animation: floatY 3.5s ease-in-out infinite;
+}
+
+/* Hero pulse */
+@keyframes pulseScale {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+.hero-cta-pulse {
+  animation: pulseScale 2.6s ease-in-out infinite;
+}
+
+/* 3D tilt shadow */
+.tilt-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: box-shadow 200ms ease, transform 200ms ease;
+}
+.tilt-card:hover {
+  box-shadow: 0 30px 50px rgba(26, 59, 93, 0.12);
+}
+
+/* small rotate applied by JS */
+.tilt-inner {
+  transform-origin: center center;
+}
+
+/* Line-draw SVG utilities */
+.line-draw path,
+.line-draw polyline,
+.line-draw rect,
+.line-draw circle,
+.line-draw line {
+  stroke: #7ad196;
+  stroke-width: 2;
+  fill: transparent;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  transition: stroke-dashoffset 1.6s ease;
+}
+.line-draw.revealed path,
+.line-draw.revealed polyline,
+.line-draw.revealed rect,
+.line-draw.revealed circle,
+.line-draw.revealed line {
+  stroke-dashoffset: 0;
+}
+
+/* Reduced-motion respect */
+@media (prefers-reduced-motion: reduce) {
+  .float, .hero-cta-pulse { animation: none; }
+  .tilt-card { transition: none; }
+}
+
+/* Accessibility: smaller devices disable heavy motion */
+@media (max-width: 768px) {
+  .float { animation: floatY 4s ease-in-out 2; }
+  .tilt-card { transform: none !important; }
+}
+
+/* Small utility to enlarge stat numbers slightly on tablet */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .stat-number { font-size: 2.8rem; }
+}

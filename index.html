@@ -1,381 +1,401 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BetControl - Take Back Control of Your Life</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <!-- Flaticon Uicons CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons/css/all/all.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons/css/all/all.css"
+    />
+    <!-- Font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <!-- Favicon logo -->
-    <link rel="shortcut icon" href="images/favicon.png" type="favicon.png">
+    <link rel="shortcut icon" href="images/favicon.png" type="favicon.png" />
     <!-- responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/responsive.css" />
     <!-- animation css -->
-    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/animation.css" />
     <!-- main css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations-enhanced.css" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: #2C3E50;
-            /* overflow-x: hidden; */
-        }
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #2c3e50;
+        /* overflow-x: hidden; */
+      }
 
-       
-      
-        .btn-get-started {
-            background: #1e3a5f;
-            color: white;
-            padding: 0.6rem 1.5rem;
-            border-radius: 6px;
-            font-weight: 600;
-            border: none;
-            transition: all 0.3s;
-        }
+      .btn-get-started {
+        background: #1e3a5f;
+        color: white;
+        padding: 0.6rem 1.5rem;
+        border-radius: 6px;
+        font-weight: 600;
+        border: none;
+        transition: all 0.3s;
+      }
 
-        .btn-get-started:hover {
-            background: #152d4a;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(30, 58, 95, 0.3);
-        }
+      .btn-get-started:hover {
+        background: #152d4a;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(30, 58, 95, 0.3);
+      }
 
-        .btn-login {
-            color: #1e3a5f;
-            padding: 0.6rem 1.5rem;
-            border: 2px solid #1e3a5f;
-            border-radius: 6px;
-            font-weight: 600;
-            margin-left: 1rem;
-            background: white;
-            transition: all 0.3s;
-        }
+      .btn-login {
+        color: #1e3a5f;
+        padding: 0.6rem 1.5rem;
+        border: 2px solid #1e3a5f;
+        border-radius: 6px;
+        font-weight: 600;
+        margin-left: 1rem;
+        background: white;
+        transition: all 0.3s;
+      }
 
-        .btn-login:hover {
-            background: #1e3a5f;
-            color: white;
-        }
+      .btn-login:hover {
+        background: #1e3a5f;
+        color: white;
+      }
 
-        .btn-primary-cta {
-            background: #1e3a5f;
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 8px;
-            font-weight: 600;
-            border: none;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-        }
+      .btn-primary-cta {
+        background: #1e3a5f;
+        color: white;
+        padding: 1rem 2.5rem;
+        border-radius: 8px;
+        font-weight: 600;
+        border: none;
+        font-size: 1.1rem;
+        transition: all 0.3s;
+      }
 
-        .btn-primary-cta:hover {
-            background: #152d4a;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(30, 58, 95, 0.3);
-        }
+      .btn-primary-cta:hover {
+        background: #152d4a;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(30, 58, 95, 0.3);
+      }
 
-        .btn-secondary-cta {
-            background: transparent;
-            color: #7AD196;
-            padding: 1rem 2rem;
-            border: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-left: 1rem;
-            transition: all 0.3s;
-        }
+      .btn-secondary-cta {
+        background: transparent;
+        color: #7ad196;
+        padding: 1rem 2rem;
+        border: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-left: 1rem;
+        transition: all 0.3s;
+      }
 
-        .btn-secondary-cta:hover {
-            color: #7AD196;
-        }
+      .btn-secondary-cta:hover {
+        color: #7ad196;
+      }
 
-        .hero-icons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
+      .hero-icons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
 
-        .hero-icon-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
+      .hero-icon-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
 
-        .hero-icon-item i {
-            color: #7AD196;
-        }
+      .hero-icon-item i {
+        color: #7ad196;
+      }
 
-        /* Stats Section */
-        .stats-section {
-            padding: 3rem 0;
-            background: white;
-        }
+      /* Stats Section */
+      .stats-section {
+        padding: 3rem 0;
+        background: white;
+      }
 
-        .stat-card {
-            text-align: center;
-            padding: 2rem 1rem;
-        }
+      .stat-card {
+        text-align: center;
+        padding: 2rem 1rem;
+      }
 
-        .stat-icon {
-            color: #7AD196;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
+      .stat-icon {
+        color: #7ad196;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
 
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #1e3a5f;
-            margin-bottom: 0.5rem;
-        }
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1e3a5f;
+        margin-bottom: 0.5rem;
+      }
 
-        .stat-label {
-            color: #6B7280;
-            font-size: 0.95rem;
-        }
+      .stat-label {
+        color: #6b7280;
+        font-size: 0.95rem;
+      }
 
-        /* Who Is BetControl For */
-        .for-section {
-            padding: 5rem 0;
-            background: #f8fffe;
-        }
+      /* Who Is BetControl For */
+      .for-section {
+        padding: 5rem 0;
+        background: #f8fffe;
+      }
 
-        .section-label {
-            color: #7AD196;
-            font-size: 0.9rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-        }
+      .section-label {
+        color: #7ad196;
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
 
-        .section-title {
-            /* font-size: 2.5rem; */
-            /* font-weight: 700; */
-            color: #1A3B5D;
-            margin-bottom: 1rem;
-        }
+      .section-title {
+        /* font-size: 2.5rem; */
+        /* font-weight: 700; */
+        color: #1a3b5d;
+        margin-bottom: 1rem;
+      }
 
-        .section-subtitle {
-            color: #6B7280;
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-        }
+      .section-subtitle {
+        color: #6b7280;
+        font-size: 1.1rem;
+        margin-bottom: 3rem;
+      }
 
-        .for-options {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
+      .for-options {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
 
-        .for-option {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1.2rem;
-            background: white;
-            border: 2px solid #f0f0f0;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
+      .for-option {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.2rem;
+        background: white;
+        border: 2px solid #f0f0f0;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
 
-        .for-option:hover,
-        .for-option.active {
-            border-color: #7AD196;
-            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.1);
-        }
+      .for-option:hover,
+      .for-option.active {
+        border-color: #7ad196;
+        box-shadow: 0 4px 15px rgba(76, 175, 80, 0.1);
+      }
 
-        .for-option-icon {
-            width: 45px;
-            height: 45px;
-            background: #e8f5e9;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #7AD196;
-            font-size: 1.3rem;
-        }
+      .for-option-icon {
+        width: 45px;
+        height: 45px;
+        background: #e8f5e9;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #7ad196;
+        font-size: 1.3rem;
+      }
 
-        .for-option-text {
-            font-weight: 600;
-            color: #1e3a5f;
-        }
+      .for-option-text {
+        font-weight: 600;
+        color: #1e3a5f;
+      }
 
-        .bettor-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
+      .bettor-card {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
 
-        .bettor-icon {
-            width: 60px;
-            height: 60px;
-            background: #e8f5e9;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #7AD196;
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-        }
+      .bettor-icon {
+        width: 60px;
+        height: 60px;
+        background: #e8f5e9;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #7ad196;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+      }
 
-        .bettor-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1e3a5f;
-            margin-bottom: 1rem;
-        }
+      .bettor-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1e3a5f;
+        margin-bottom: 1rem;
+      }
 
-        .bettor-text {
-            color: #6B7280;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
+      .bettor-text {
+        color: #6b7280;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
 
-        .btn-success-custom {
-            background: #7AD196;
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 8px;
-            font-weight: 600;
-            border: none;
-            transition: all 0.3s;
-        }
+      .btn-success-custom {
+        background: #7ad196;
+        color: white;
+        padding: 0.8rem 1.5rem;
+        border-radius: 8px;
+        font-weight: 600;
+        border: none;
+        transition: all 0.3s;
+      }
 
-        .btn-success-custom:hover {
-            background: #45a049;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
-        }
+      .btn-success-custom:hover {
+        background: #45a049;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+      }
 
-        /* Features Section */
-        .features-section {
-            padding: 5rem 0;
-            background: white;
-        }
+      /* Features Section */
+      .features-section {
+        padding: 5rem 0;
+        background: white;
+      }
 
-        .feature-card {
-            padding: 2rem;
-            background: #ffffff;
-            border: 1px solid rgb(230, 228, 228);
-            border-radius: 15px;
-            margin-bottom: 2rem;
-            transition: all 0.3s;
-        }
+      .feature-card {
+        padding: 2rem;
+        background: #ffffff;
+        border: 1px solid rgb(230, 228, 228);
+        border-radius: 15px;
+        margin-bottom: 2rem;
+        transition: all 0.3s;
+      }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 25px rgba(0,0,0,0.08);
-        }
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+      }
 
-        .feature-icon {
-            width: 50px;
-            height: 50px;
-            /* background: #e8f5e9; */
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #7AD196;
-            font-size: 1.5rem;
-            margin-bottom: 1.2rem;
-        }
+      .feature-icon {
+        width: 50px;
+        height: 50px;
+        /* background: #e8f5e9; */
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #7ad196;
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+      }
 
-        .feature-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #1e3a5f;
-            margin-bottom: 0.8rem;
-        }
+      .feature-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #1e3a5f;
+        margin-bottom: 0.8rem;
+      }
 
-        .feature-text {
-            color: #6B7280;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
+      .feature-text {
+        color: #6b7280;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
 
-        /* Testimonial Section */
-        .testimonial-section {
-            padding: 5rem 0;
-            background: #1e3a5f;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
+      /* Testimonial Section */
+      .testimonial-section {
+        padding: 5rem 0;
+        background: #1e3a5f;
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
 
-        .testimonial-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
-            border-radius: 50%;
-        }
+      .testimonial-section::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.05) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+      }
 
-        .stars {
-            color: #7AD196;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
+      .stars {
+        color: #7ad196;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
 
-        .testimonial-text {
-            font-size: 1.5rem;
-            font-weight: 500;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            position: relative;
-        }
+      .testimonial-text {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        position: relative;
+      }
 
-        .testimonial-author {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
+      .testimonial-author {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
 
-        .author-avatar {
-            width: 60px;
-            height: 60px;
-            background: #D9D9D9;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
+      .author-avatar {
+        width: 60px;
+        height: 60px;
+        background: #d9d9d9;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
 
-        .author-name {
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
+      .author-name {
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
 
-        .author-title {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
-        }
+      .author-title {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+      }
 
-        /* How It Works Section */
-        /* .how-it-works-section {
+      /* How It Works Section */
+      /* .how-it-works-section {
             padding: 5rem 0;
             background: #f8fffe;
         }
@@ -412,707 +432,901 @@
             line-height: 1.6;
         } */
 
-        /* CTA Section */
-        .cta-section {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #1e3a5f 0%, #152d4a 100%);
-            color: white;
-            position: relative;
-            overflow: hidden;
+      /* CTA Section */
+      .cta-section {
+        padding: 5rem 0;
+        background: linear-gradient(135deg, #1e3a5f 0%, #152d4a 100%);
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-section::before,
+      .cta-section::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      .cta-section::before {
+        top: -20%;
+        right: -10%;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(
+          circle,
+          rgba(76, 175, 80, 0.1) 0%,
+          transparent 70%
+        );
+      }
+
+      .cta-section::after {
+        bottom: -30%;
+        left: -15%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.03) 0%,
+          transparent 70%
+        );
+      }
+
+      .cta-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .cta-text {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+
+      .btn-cta-green {
+        background: #7ad196;
+        color: white;
+        padding: 1rem 2.5rem;
+        border-radius: 8px;
+        font-weight: 600;
+        border: none;
+        font-size: 1.1rem;
+        transition: all 0.3s;
+      }
+
+      .btn-cta-green:hover {
+        background: #45a049;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+      }
+
+      /* Footer */
+      .footer {
+        padding: 4rem 0 2rem;
+        background: white;
+        border-top: 1px solid #e5e7eb;
+      }
+
+      .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 700;
+        font-size: 1.3rem;
+        color: #1e3a5f;
+        margin-bottom: 1rem;
+      }
+
+      .footer-brand i {
+        color: #7ad196;
+        font-size: 1.5rem;
+      }
+
+      .footer-text {
+        color: #6b7280;
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+
+      .footer-title {
+        font-weight: 700;
+        color: #1e3a5f;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links a {
+        color: #6b7280;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer-links a:hover {
+        color: #7ad196;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        background: #f3f4f6;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #1e3a5f;
+        transition: all 0.3s;
+      }
+
+      .social-links a:hover {
+        background: #7ad196;
+        color: white;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        margin-top: 3rem;
+        border-top: 1px solid #e5e7eb;
+        color: #6b7280;
+        font-size: 0.9rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2.5rem;
         }
 
-        .cta-section::before,
-        .cta-section::after {
-            content: '';
-            position: absolute;
-            border-radius: 50%;
+        .section-title {
+          font-size: 2rem;
         }
 
-        .cta-section::before {
-            top: -20%;
-            right: -10%;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(76, 175, 80, 0.1) 0%, transparent 70%);
+        .btn-secondary-cta {
+          margin-left: 0;
+          margin-top: 1rem;
         }
 
-        .cta-section::after {
-            bottom: -30%;
-            left: -15%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+        .hero-icons {
+          flex-direction: column;
         }
 
-        .cta-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
+        .testimonial-text {
+          font-size: 1.2rem;
         }
+      }
 
-        .cta-text {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
         }
-
-        .btn-cta-green {
-            background: #7AD196;
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 8px;
-            font-weight: 600;
-            border: none;
-            font-size: 1.1rem;
-            transition: all 0.3s;
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
+      }
 
-        .btn-cta-green:hover {
-            background: #45a049;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
-        }
+      .fade-in-up {
+        animation: fadeInUp 0.6s ease-out;
+      }
 
-        /* Footer */
-        .footer {
-            padding: 4rem 0 2rem;
-            background: white;
-            border-top: 1px solid #e5e7eb;
-        }
-
-        .footer-brand {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 700;
-            font-size: 1.3rem;
-            color: #1e3a5f;
-            margin-bottom: 1rem;
-        }
-
-        .footer-brand i {
-            color: #7AD196;
-            font-size: 1.5rem;
-        }
-
-        .footer-text {
-            color: #6B7280;
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        .footer-title {
-            font-weight: 700;
-            color: #1e3a5f;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .footer-links {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-links a {
-            color: #6B7280;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: #7AD196;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            background: #f3f4f6;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #1e3a5f;
-            transition: all 0.3s;
-        }
-
-        .social-links a:hover {
-            background: #7AD196;
-            color: white;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            margin-top: 3rem;
-            border-top: 1px solid #e5e7eb;
-            color: #6B7280;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .btn-secondary-cta {
-                margin-left: 0;
-                margin-top: 1rem;
-            }
-
-            .hero-icons {
-                flex-direction: column;
-            }
-
-            .testimonial-text {
-                font-size: 1.2rem;
-            }
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.2s; }
-        .delay-3 { animation-delay: 0.3s; }
-        .delay-4 { animation-delay: 0.4s; }
+      .delay-1 {
+        animation-delay: 0.1s;
+      }
+      .delay-2 {
+        animation-delay: 0.2s;
+      }
+      .delay-3 {
+        animation-delay: 0.3s;
+      }
+      .delay-4 {
+        animation-delay: 0.4s;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Preloader Start -->
-	<div class="preloader" id="preloader">
-        <div class="dot-loader">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+    <div class="preloader" id="preloader">
+      <div class="dot-loader">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-	<!-- Preloader End -->
+    <!-- Preloader End -->
 
-<!-- REPLACE YOUR ENTIRE HEADER WITH THIS -->
-<header class="main-header">
-    <div class="header-sticky">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <!-- Logo Start -->
-                <a class="navbar-brand" href="index.html">
-                    <img src="images/Logo.svg" alt="Logo" width="150" height="">
-                </a>
-                <!-- Logo End -->
-
-                <!-- Mobile Offcanvas Toggle Button - Shows only on mobile -->
-                <button class="btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavBetControl" aria-controls="offcanvasNavBetControl">
-                    <i class="fas fa-bars" style="font-size: 24px; color: #1A3B5D;"></i>
-                </button>
-
-                <!-- Desktop Menu - Hidden on mobile -->
-                <div class="collapse navbar-collapse main-menu d-none d-lg-block">
-                    <div class="nav-menu-wrapper">
-                        <ul class="navbar-nav mr-auto" id="menu">
-                            <li class="nav-item submenu"><a class="nav-link" href="#">Solutions</a>
-                                <ul>
-                                    <li class="nav-item"><a class="nav-link" href="bettors.html">Bettors</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="parents.html">Parents</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="family&friends.html">Families</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="entreprise.html">Enterprise</a></li>
-                                </ul>
-                            </li>             
-                              <!-- features -->
-                            <li class="mobile-nav-item">
-                                <a href="#" class="mobile-nav-link">features</a>
-                            </li>                   
-                            <li class="nav-item submenu"><a class="nav-link" href="#">Company</a>
-                                <ul>                                        
-                                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="service-single.html">Stories</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="#">Stories</a></li>                             
-                        </ul>
-                    </div>
-                    <!-- Header Btn Start -->
-                    <div class="header-btn d-inline-flex">
-                        <a href="">
-                            <button class="header-btn1">
-                                Get Started
-                            </button>
-                        </a>
-                        <a href="">
-                            <button class="header-btn2">
-                                Log in
-                            </button>
-                        </a>
-                    </div>
-                    <!-- Header Btn End -->
-                </div>
-                <!-- Desktop Menu End -->
-            </div>
-        </nav>
-    </div>
-</header>
-
-<!-- Offcanvas for Mobile Navigation -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavBetControl" aria-labelledby="offcanvasNavBetControlLabel">
-    <div class="offcanvas-header">
+    <!-- Offcanvas for Mobile Navigation -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasNavBetControl"
+      aria-labelledby="offcanvasNavBetControlLabel"
+    >
+      <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavBetControlLabel">
-            <img src="images/Logo.svg" alt="Logo" class="img-fluid" style="max-width: 150px;">
+          <img
+            src="images/Logo(W).svg"
+            alt="Logo"
+            class="img-fluid"
+            style="max-width: 150px"
+          />
         </h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    
-    <div class="offcanvas-body">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
         <!-- Mobile Navigation Menu -->
         <ul class="list-unstyled mobile-nav-menu">
-            <!-- Solutions Dropdown -->
-            <li class="mobile-nav-item">
-                <a class="mobile-nav-link" data-bs-toggle="collapse" href="#solutionsCollapse" role="button" aria-expanded="false" aria-controls="solutionsCollapse">
-                    Solutions
-                    <i class="fas fa-chevron-down float-end"></i>
-                </a>
-                <div class="collapse" id="solutionsCollapse">
-                    <ul class="list-unstyled ps-3">
-                        <li><a href="bettors.html" class="mobile-nav-sublink">Bettors</a></li>
-                        <li><a href="parents.html" class="mobile-nav-sublink">Parents</a></li>
-                        <li><a href="family&friends.html" class="mobile-nav-sublink">Families</a></li>
-                        <li><a href="entreprise.html" class="mobile-nav-sublink">Enterprise</a></li>
-                    </ul>
-                </div>
-            </li>
-            <!-- features -->
-            <li class="mobile-nav-item">
-                <a href="#" class="mobile-nav-link">features</a>
-            </li>
+          <!-- Solutions Dropdown -->
+          <li class="mobile-nav-item">
+            <a
+              class="mobile-nav-link"
+              data-bs-toggle="collapse"
+              href="#solutionsCollapse"
+              role="button"
+              aria-expanded="false"
+              aria-controls="solutionsCollapse"
+            >
+              Solutions
+              <i class="fas fa-chevron-down float-end"></i>
+            </a>
+            <div class="collapse" id="solutionsCollapse">
+              <ul class="list-unstyled ps-3">
+                <li>
+                  <a href="bettors.html" class="mobile-nav-sublink">Bettors</a>
+                </li>
+                <li>
+                  <a href="parents.html" class="mobile-nav-sublink">Parents</a>
+                </li>
+                <li>
+                  <a href="family&friends.html" class="mobile-nav-sublink"
+                    >Families</a
+                  >
+                </li>
+                <li>
+                  <a href="entreprise.html" class="mobile-nav-sublink"
+                    >Enterprise</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- features -->
+          <li class="mobile-nav-item">
+            <a href="#" class="mobile-nav-link">features</a>
+          </li>
 
-            <!-- Company Dropdown -->
-            <li class="mobile-nav-item">
-                <a class="mobile-nav-link" data-bs-toggle="collapse" href="#companyCollapse" role="button" aria-expanded="false" aria-controls="companyCollapse">
-                    Company
-                    <i class="fas fa-chevron-down float-end"></i>
-                </a>
-                <div class="collapse" id="companyCollapse">
-                    <ul class="list-unstyled ps-3">
-                        <li><a href="about.html" class="mobile-nav-sublink">About Us</a></li>
-                        <li><a href="service-single.html" class="mobile-nav-sublink">Stories</a></li>
-                        <li><a href="contact.html" class="mobile-nav-sublink">Contact Us</a></li>
-                    </ul>
-                </div>
-            </li>
+          <!-- Company Dropdown -->
+          <li class="mobile-nav-item">
+            <a
+              class="mobile-nav-link"
+              data-bs-toggle="collapse"
+              href="#companyCollapse"
+              role="button"
+              aria-expanded="false"
+              aria-controls="companyCollapse"
+            >
+              Company
+              <i class="fas fa-chevron-down float-end"></i>
+            </a>
+            <div class="collapse" id="companyCollapse">
+              <ul class="list-unstyled ps-3">
+                <li>
+                  <a href="about.html" class="mobile-nav-sublink">About Us</a>
+                </li>
+                <li>
+                  <a href="service-single.html" class="mobile-nav-sublink"
+                    >Stories</a
+                  >
+                </li>
+                <li>
+                  <a href="contact.html" class="mobile-nav-sublink"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
 
-            <!-- Stories Link -->
-            <li class="mobile-nav-item">
-                <a href="#" class="mobile-nav-link">Stories</a>
-            </li>
+          <!-- Stories Link -->
+          <li class="mobile-nav-item">
+            <a href="#" class="mobile-nav-link">Stories</a>
+          </li>
         </ul>
-
         <!-- Mobile Action Buttons -->
         <div class="mobile-action-buttons mt-4">
-            <button class="mobile-btn-primary mb-3" onclick="location.href='#'">
-                Get Started
-            </button>
-            <button class="mobile-btn-secondary" onclick="location.href='#'">
-                Log in
-            </button>
+          <button class="mobile-btn-primary mb-3" onclick="location.href = '#'">
+            Get Started
+          </button>
+          <button class="mobile-btn-secondary" onclick="location.href = '#'">
+            Log in
+          </button>
         </div>
-
         <!-- Social Media Icons -->
         <div class="mt-4">
-            <p class="fw-bold text-dark">Follow Us:</p>
-            <div class="d-flex gap-3">
-                <a href="#" class="social-icon">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social-icon">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="#" class="social-icon">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
+          <p class="fw-bold text-dark">Follow Us:</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
-
-        <!-- Optional: Help/Support Section -->
-        <div class="mt-4 pt-3 border-top">
-            <p class="text-muted small mb-2">Need Help?</p>
-            <a href="#" class="text-decoration-none text-primary">
-                <i class="fas fa-phone-alt"></i> 24/7 Hotline: 1-800-BETHELP
-            </a>
-        </div>
+      </div>
     </div>
-</div>
-<!-- Offcanvas End -->
- 
+    <!-- Offcanvas End -->
+
+    <header class="main-header">
+      <div class="header-sticky">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <!-- Logo Start -->
+            <a class="navbar-brand" href="index.html">
+              <img src="images/Logo.svg" alt="Logo" width="150" height="" />
+            </a>
+            <!-- Logo End -->
+
+            <!-- Mobile Offcanvas Toggle Button - Shows only on mobile -->
+            <button
+              class="btn d-lg-none"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavBetControl"
+              aria-controls="offcanvasNavBetControl"
+            >
+              <i
+                class="fas fa-bars"
+                style="font-size: 24px; color: #1a3b5d"
+              ></i>
+            </button>
+
+            <!-- Desktop Menu - Hidden on mobile -->
+            <div class="collapse navbar-collapse main-menu d-none d-lg-block">
+              <div class="nav-menu-wrapper">
+                <ul class="navbar-nav mr-auto" id="menu">
+                  <li class="nav-item submenu">
+                    <a class="nav-link" href="#">Solutions</a>
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link" href="bettors.html">Bettors</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="parents.html">Parents</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="family&friends.html"
+                          >Families</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="entreprise.html"
+                          >Enterprise</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">features</a>
+                  </li>
+                  <li class="nav-item submenu">
+                    <a class="nav-link" href="#">Company</a>
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="service-single.html"
+                          >Stories</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Stories</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Header Btn Start -->
+              <div class="header-btn d-inline-flex">
+                <a href="">
+                  <button class="header-btn1">Get Started</button>
+                </a>
+                <a href="">
+                  <button class="header-btn2">Log in</button>
+                </a>
+              </div>
+              <!-- Header Btn End -->
+            </div>
+            <!-- Desktop Menu End -->
+          </div>
+        </nav>
+      </div>
+    </header>
+
     <!-- Hero Start -->
     <section class="hero-section mt-4">
-        <div class="container">
-            <div class="row">
-                <!-- Hero Header Start -->
-                <div class="col-lg-12 mb-4">
-                    <div class="hero-header mx-auto">
-                        <div class="hero-icon">
-                            <i class="fi fi-rs-lock text-muted"></i>
-                        </div>
-                        <div class="text-muted">Trusted by 50,000+ Nigerians</div>
-                    </div> 
-                </div>
-                <!-- Hero Header End -->
-                <!-- Hero Title Start -->
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h1>Take Back <span>Control</span> <br> of Your Life</h1>
-                        <p class="text-center text-muted">BetControl empowers you to manage gambling habits, protect loved ones, and <br> build healthier communities. Your journey to freedom starts here.</p>
-                    </div>
-                </div>
-                <!-- Hero Title End -->
-
-                <!-- Hero buttons start -->
-                <div class="d-flex justify-content-center my-4 gap-4">
-                    <div>
-                        <button class="btn1">Start Free Assesment</button>
-                    </div>
-                    <div>
-                        <button  class="btn2">Watch How it Works</button>
-                    </div>
-                </div>
-                <!-- Hero buttons end -->
+      <div class="container">
+        <div class="row">
+          <!-- Hero Header Start -->
+          <div class="col-lg-12 mb-4">
+            <div class="hero-header mx-auto">
+              <div class="hero-icon">
+                <i class="fi fi-rs-lock text-muted"></i>
+              </div>
+              <div class="text-muted">Trusted by 50,000+ Nigerians</div>
             </div>
+          </div>
+          <!-- Hero Header End -->
+          <!-- Hero Title Start -->
+          <div class="col-lg-12">
+            <div class="section-title">
+              <h1>
+                Take Back <span>Control</span> <br />
+                of Your Life
+              </h1>
+              <p class="text-center text-muted">
+                BetControl empowers you to manage gambling habits, protect loved
+                ones, and <br />
+                build healthier communities. Your journey to freedom starts
+                here.
+              </p>
+            </div>
+          </div>
+          <!-- Hero Title End -->
+
+          <!-- Hero buttons start -->
+          <div class="d-flex justify-content-center my-4 gap-4">
+            <div>
+              <button class="btn1">Start Free Assesment</button>
+            </div>
+            <div>
+              <button class="btn2">Watch How it Works</button>
+            </div>
+          </div>
+          <!-- Hero buttons end -->
         </div>
+      </div>
     </section>
     <!-- Hero End -->
-     
+
     <!-- stats starts -->
     <section class="overflow-hidden hero-stats">
-        <div class="d-flex gap-5 justify-content-center">
-            <div class="d-flex flex-column">
-                <div> <img src="images/Users.png" alt=""> </div>
-                <div class=""> <span> 50K+ </span> </div>
-                <div class="">User protected</div>
-            </div>
-            <div class="d-flex flex-column">
-                <div> <img src="images/Wallet.png" alt=""> </div>
-                <div class=""> <span> ₦2B+ </span> </div>
-                <div>Saved from Gambling</div>
-            </div>
-            <div class="d-flex flex-column">
-               <div> <img src="images/Buildings.png" alt=""> </div>
-               <div class=""> <span> 500+ </span> </div>
-                <div>Organizations</div>
-            </div>
-            <div class="d-flex flex-column">
-                <div> <img src="images/ChartLineUp.png" alt=""> </div>
-                <div class=""> <span> 98% </span> </div>
-                <div>Success Rate</div>
-            </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-6 col-md-6 col-lg-3 text-center mb-4">
+          <div><img src="images/Users.png" alt="" class="mb-2" /></div>
+          <div>
+            <span
+              class="stat-count stat-number"
+              data-start="0"
+              data-end="50"
+              data-duration="1500"
+              data-suffix="K+"
+              >0</span
+            >
+          </div>
+          <div class="stat-label">User protected</div>
         </div>
-    </section>   
+        <div class="col-6 col-md-6 col-lg-3 text-center mb-4">
+          <div><img src="images/Wallet.png" alt="" class="mb-2" /></div>
+          <div>
+            <span
+              class="stat-count stat-number"
+              data-start="0"
+              data-end="2"
+              data-duration="1700"
+              data-prefix="₦"
+              data-suffix="B+"
+              >0</span
+            >
+          </div>
+          <div class="stat-label">Saved from Gambling</div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3 text-center mb-4">
+          <div><img src="images/Buildings.png" alt="" class="mb-2" /></div>
+          <div>
+            <span
+              class="stat-count stat-number"
+              data-start="0"
+              data-end="500"
+              data-duration="1500"
+              data-suffix="+"
+              >0</span
+            >
+          </div>
+          <div class="stat-label">Organizations</div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3 text-center mb-4">
+          <div><img src="images/ChartLineUp.png" alt="" class="mb-2" /></div>
+          <div>
+            <span
+              class="stat-count stat-number"
+              data-start="0"
+              data-end="98"
+              data-duration="1200"
+              data-suffix="%"
+              >0</span
+            >
+          </div>
+          <div class="stat-label">Success Rate</div>
+        </div>
+      </div>
+    </section>
     <!-- stats ends -->
 
     <!-- Who Is BetControl For -->
     <section class="for-section">
-        <div class="container">
-            <div class="text-center">
-                <div class="section-label">DESIGNED FOR EVERYONE</div>
-                <h2 class="section-title">Who is BetControl for?</h2>
-                <p class="section-subtitle">
-                    Support for every individual looking to build healthier betting behaviors and take back control.
-                </p>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-4">
-                    <div class="for-options">
-                        <div class="for-option active" data-target="bettor">
-                            <div class="for-option-icon">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="for-option-text">Bettor</div>
-                        </div>
-                        <div class="for-option" data-target="parents">
-                            <div class="for-option-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="for-option-text">Parents</div>
-                        </div>
-                        <div class="for-option" data-target="family">
-                            <div class="for-option-icon">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <div class="for-option-text">Family & Friends</div>
-                        </div>
-                        <div class="for-option" data-target="enterprise">
-                            <div class="for-option-icon">
-                                <i class="fas fa-building"></i>
-                            </div>
-                            <div class="for-option-text">Enterprise</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="bettor-card" id="content-bettor">
-                        <div class="bettor-icon">
-                            <i class="fas fa-user-shield"></i>
-                        </div>
-                        <h3 class="bettor-title">I'm A Bettor</h3>
-                        <p class="bettor-text">
-                            Take charge of your life with a safe, supportive environment. Reduce harm and build healthier patterns. We understand what you're going through, and we're here to support you at every step.
-                        </p>
-                        <button class="btn-success-custom">
-                            Start today <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="text-center">
+          <div class="section-label">DESIGNED FOR EVERYONE</div>
+          <h2 class="section-title">Who is BetControl for?</h2>
+          <p class="section-subtitle">
+            Support for every individual looking to build healthier betting
+            behaviors and take back control.
+          </p>
         </div>
+        <div class="row align-items-center">
+          <div class="col-lg-4">
+            <div class="for-options">
+              <div class="for-option active" data-target="bettor">
+                <div class="for-option-icon">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="for-option-text">Bettor</div>
+              </div>
+              <div class="for-option" data-target="parents">
+                <div class="for-option-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="for-option-text">Parents</div>
+              </div>
+              <div class="for-option" data-target="family">
+                <div class="for-option-icon">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <div class="for-option-text">Family & Friends</div>
+              </div>
+              <div class="for-option" data-target="enterprise">
+                <div class="for-option-icon">
+                  <i class="fas fa-building"></i>
+                </div>
+                <div class="for-option-text">Enterprise</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="bettor-card" id="content-bettor">
+              <div class="bettor-icon">
+                <i class="fas fa-user-shield"></i>
+              </div>
+              <h3 class="bettor-title">I'm A Bettor</h3>
+              <p class="bettor-text">
+                Take charge of your life with a safe, supportive environment.
+                Reduce harm and build healthier patterns. We understand what
+                you're going through, and we're here to support you at every
+                step.
+              </p>
+              <button class="btn-success-custom">
+                Start today <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+
+            <div class="bettor-card" id="content-parents" style="display: none">
+              <div class="bettor-icon">
+                <i class="fas fa-user-friends"></i>
+              </div>
+              <h3 class="bettor-title">For Parents</h3>
+              <p class="bettor-text">
+                Tools and guidance to protect your children and loved ones from
+                gambling harm. Set limits, monitor activity, and get expert
+                advice on how to support someone at risk.
+              </p>
+              <button class="btn-success-custom">
+                Learn more <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+
+            <div class="bettor-card" id="content-family" style="display: none">
+              <div class="bettor-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <h3 class="bettor-title">Family & Friends</h3>
+              <p class="bettor-text">
+                Supportive resources for loved ones who want to help someone
+                struggling with gambling. Find conversation guides, boundaries,
+                and recovery pathways.
+              </p>
+              <button class="btn-success-custom">
+                Get support <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+
+            <div
+              class="bettor-card"
+              id="content-enterprise"
+              style="display: none"
+            >
+              <div class="bettor-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <h3 class="bettor-title">Enterprise</h3>
+              <p class="bettor-text">
+                Solutions for organizations to protect employees and customers.
+                Implement policies, monitoring tools, and training to reduce
+                gambling-related harm at scale.
+              </p>
+              <button class="btn-success-custom">
+                Explore solutions <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Features Section -->
     <section class="features-section" id="features">
-        <div class="container">
-            <div class="text-center mb-5">
-                <div class="section-label">POWERFUL FEATURES</div>
-                <h2 class="section-title">Everything You Need to Succeed</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-clipboard-check"></i>
-                        </div>
-                        <h3 class="feature-title">Self-Assessment</h3>
-                        <p class="feature-text">
-                            Take our free assessment to understand your betting patterns and get personalized recommendations.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-wallet"></i>
-                        </div>
-                        <h3 class="feature-title">Smart Budgeting</h3>
-                        <p class="feature-text">
-                            Set spending limits and track your budget in real-time with intelligent alerts and insights.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3 class="feature-title">Progress Analytics</h3>
-                        <p class="feature-text">
-                            Visualize your journey with detailed analytics and celebrate your milestones along the way.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-ban"></i>
-                        </div>
-                        <h3 class="feature-title">Site Blocking</h3>
-                        <p class="feature-text">
-                            Block access to gambling sites and apps to help you stay on track with your goals.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-comments"></i>
-                        </div>
-                        <h3 class="feature-title">1-on-1 Therapy</h3>
-                        <p class="feature-text">
-                            Connect with licensed therapists who specialize in gambling recovery and mental health support.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-hands-helping"></i>
-                        </div>
-                        <h3 class="feature-title">Community Support</h3>
-                        <p class="feature-text">
-                            Join a supportive community of people who understand your journey and share your goals.
-                        </p>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="text-center mb-5">
+          <div class="section-label">POWERFUL FEATURES</div>
+          <h2 class="section-title">Everything You Need to Succeed</h2>
         </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-clipboard-check"></i>
+              </div>
+              <h3 class="feature-title">Self-Assessment</h3>
+              <p class="feature-text">
+                Take our free assessment to understand your betting patterns and
+                get personalized recommendations.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-wallet"></i>
+              </div>
+              <h3 class="feature-title">Smart Budgeting</h3>
+              <p class="feature-text">
+                Set spending limits and track your budget in real-time with
+                intelligent alerts and insights.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3 class="feature-title">Progress Analytics</h3>
+              <p class="feature-text">
+                Visualize your journey with detailed analytics and celebrate
+                your milestones along the way.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-ban"></i>
+              </div>
+              <h3 class="feature-title">Site Blocking</h3>
+              <p class="feature-text">
+                Block access to gambling sites and apps to help you stay on
+                track with your goals.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-comments"></i>
+              </div>
+              <h3 class="feature-title">1-on-1 Therapy</h3>
+              <p class="feature-text">
+                Connect with licensed therapists who specialize in gambling
+                recovery and mental health support.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-hands-helping"></i>
+              </div>
+              <h3 class="feature-title">Community Support</h3>
+              <p class="feature-text">
+                Join a supportive community of people who understand your
+                journey and share your goals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Testimonial Section -->
     <section class="testimonial-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "BetControl helped me see my patterns clearly for the first time. The budgeting tool alone saved me from a spiral. I'm 6 months clean now."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">T</div>
-                        <div>
-                            <div class="author-name">Temi A.</div>
-                            <div class="author-title">Lagos, Nigeria</div>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
             </div>
+            <p class="testimonial-text">
+              "BetControl helped me see my patterns clearly for the first time.
+              The budgeting tool alone saved me from a spiral. I'm 6 months
+              clean now."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">T</div>
+              <div>
+                <div class="author-name">Temi A.</div>
+                <div class="author-title">Lagos, Nigeria</div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- How It Works Section -->
     <section class="how-it-works-section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <div class="section-label">SIMPLE & EFFECTIVE</div>
-                <h2 class="section-title">How It Works</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4">
-                    <div class="step-card">
-                        <div class="step-number">1</div>
-                        <h3 class="step-title">Set Up Protection</h3>
-                        <p class="step-text">
-                            Take our free assessment and set up your personalized protection plan in minutes.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="step-card">
-                        <div class="step-number">2</div>
-                        <h3 class="step-title">Set Up Protection</h3>
-                        <p class="step-text">
-                            Track your progress with our tools and get support from our community and experts.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="step-card">
-                        <div class="step-number">3</div>
-                        <h3 class="step-title">Set Up Protection</h3>
-                        <p class="step-text">
-                            Build healthier habits and take back control of your life, one day at a time.
-                        </p>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="text-center mb-5">
+          <div class="section-label">SIMPLE & EFFECTIVE</div>
+          <h2 class="section-title">How It Works</h2>
         </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-4">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <h3 class="step-title">Set Up Protection</h3>
+              <p class="step-text">
+                Take our free assessment and set up your personalized protection
+                plan in minutes.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <h3 class="step-title">Set Up Protection</h3>
+              <p class="step-text">
+                Track your progress with our tools and get support from our
+                community and experts.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <h3 class="step-title">Set Up Protection</h3>
+              <p class="step-text">
+                Build healthier habits and take back control of your life, one
+                day at a time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
     <section class="cta-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="cta-title">Ready to Take Control?</h2>
-                    <p class="cta-text">
-                        Join thousands of individuals who have taken the first step towards a healthier relationship with gambling.
-                    </p>
-                    <button class="btn-cta-green">Start Free Assessment</button>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="cta-title">Ready to Take Control?</h2>
+            <p class="cta-text">
+              Join thousands of individuals who have taken the first step
+              towards a healthier relationship with gambling.
+            </p>
+            <button class="btn-cta-green">Start Free Assessment</button>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer" id="company">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="footer-brand">
-                       <img src="images/Logo.svg" alt="">
-                    </div>
-                    <p class="footer-text">
-                        BetControl is dedicated to helping individuals take control of their gambling behaviors through technology, community support, and professional guidance.
-                    </p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 mb-4">
-                    <h4 class="footer-title">Solutions</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">For Bettors</a></li>
-                        <li><a href="#">For Parents</a></li>
-                        <li><a href="#">For Families</a></li>
-                        <li><a href="#">Enterprise</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-4 mb-4">
-                    <h4 class="footer-title">Features</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Assessment</a></li>
-                        <li><a href="#">Budgeting</a></li>
-                        <li><a href="#">Site Blocking</a></li>
-                        <li><a href="#">Therapy</a></li>
-                        <li><a href="#">Community</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-4 mb-4">
-                    <h4 class="footer-title">Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Our Mission</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Press</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-4 mb-4" id="support">
-                    <h4 class="footer-title">Support</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Resources</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <div class="footer-brand">
+              <img src="images/Logo.svg" alt="" />
             </div>
-            <div class="footer-bottom">
-                © 2025 BetControl. Technology by 2025. All rights reserved.
+            <p class="footer-text">
+              BetControl is dedicated to helping individuals take control of
+              their gambling behaviors through technology, community support,
+              and professional guidance.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-x-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-6 mb-4">
+            <h4 class="footer-title">Solutions</h4>
+            <ul class="footer-links">
+              <li><a href="#">For Bettors</a></li>
+              <li><a href="#">For Parents</a></li>
+              <li><a href="#">For Families</a></li>
+              <li><a href="#">Enterprise</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 col-6 mb-4">
+            <h4 class="footer-title">Features</h4>
+            <ul class="footer-links">
+              <li><a href="#">Assessment</a></li>
+              <li><a href="#">Budgeting</a></li>
+              <li><a href="#">Site Blocking</a></li>
+              <li><a href="#">Therapy</a></li>
+              <li><a href="#">Community</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 col-6 mb-4">
+            <h4 class="footer-title">Company</h4>
+            <ul class="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Mission</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 col-6 mb-4" id="support">
+            <h4 class="footer-title">Support</h4>
+            <ul class="footer-links">
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Resources</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
         </div>
+        <div class="footer-bottom">
+          © 2025 BetControl. Technology by 2025. All rights reserved.
+        </div>
+      </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>   
+    <!-- Footer end -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="js/script.js"></script>
-    <!-- <script src="js/mobile-menu.js"></script> -->
-</body>
+    <script src="js/animations.js"></script>
+  </body>
 </html>
