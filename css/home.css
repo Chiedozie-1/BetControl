@@ -684,7 +684,7 @@ body.home-page {
 }
 .footer-solution-dropdown {
   position: absolute;
-  right: 0;
+  /* right: 0; */
   bottom: calc(100% + 14px);
   display: grid;
   min-width: 172px;
@@ -751,7 +751,9 @@ body.home-page {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    padding-top: 18px;
+    padding: 18px;
+    background-color:#102a3f;
+    border: 1px solid rgba(122, 209, 150, 0.35);    
   }
   .hero {
     padding-top: 130px;
