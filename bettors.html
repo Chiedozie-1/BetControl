@@ -3,525 +3,325 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>For Bettors - BetControl</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
+    <meta
+      name="description"
+      content="BetControl gives bettors practical tools to block distractions, set boundaries, and build healthier digital habits."
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <title>For Bettors | BetControl</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <!-- Flaticon Uicons CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons/css/all/all.css"
-    />
-    <!-- Font-awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <!-- Favicon logo -->
-    <link rel="shortcut icon" href="images/favicon.png" type="favicon.png" />
-    <!-- responsive css -->
-    <link rel="stylesheet" href="css/responsive.css" />
-    <!-- animation css -->
-    <link rel="stylesheet" href="css/animation.css" />
-    <!-- main css -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/animations-enhanced.css" />
-    <!-- page css -->
-    <link rel="stylesheet" href="css/bettors.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="css/bettors-home.css" />
   </head>
-  <body>
-    <!-- Preloader Start -->
-    <div class="preloader" id="preloader">
-      <div class="dot-loader">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-    <!-- Preloader End -->
-
-    <!-- Offcanvas for Mobile Navigation -->
+  <body class="bettors-page">
     <div
-      class="offcanvas offcanvas-end"
-      tabindex="-1"
-      id="offcanvasNavBetControl"
-      aria-labelledby="offcanvasNavBetControlLabel"
+      class="site-preloader"
+      id="sitePreloader"
+      role="status"
+      aria-label="Loading BetControl"
     >
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavBetControlLabel">
-          <img
-            src="images/Logo(W).svg"
-            alt="Logo"
-            class="img-fluid"
-            style="max-width: 150px"
-          />
-        </h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="offcanvas-body">
-        <!-- Mobile Navigation Menu -->
-        <ul class="list-unstyled mobile-nav-menu">
-          <!-- Solutions Dropdown -->
-          <li class="mobile-nav-item">
-            <a
-              class="mobile-nav-link"
-              data-bs-toggle="collapse"
-              href="#solutionsCollapse"
-              role="button"
-              aria-expanded="false"
-              aria-controls="solutionsCollapse"
-            >
-              Solutions
-              <i class="fas fa-chevron-down float-end"></i>
-            </a>
-            <div class="collapse" id="solutionsCollapse">
-              <ul class="list-unstyled ps-3">
-                <li>
-                  <a href="bettors.html" class="mobile-nav-sublink">Bettors</a>
-                </li>
-                <li>
-                  <a href="parents.html" class="mobile-nav-sublink">Parents</a>
-                </li>
-                <li>
-                  <a href="family&friends.html" class="mobile-nav-sublink"
-                    >Families</a
-                  >
-                </li>
-                <li>
-                  <a href="entreprise.html" class="mobile-nav-sublink"
-                    >Enterprise</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-          <!-- features -->
-          <li class="mobile-nav-item">
-            <a href="#" class="mobile-nav-link">features</a>
-          </li>
-
-          <!-- Company Dropdown -->
-          <li class="mobile-nav-item">
-            <a
-              class="mobile-nav-link"
-              data-bs-toggle="collapse"
-              href="#companyCollapse"
-              role="button"
-              aria-expanded="false"
-              aria-controls="companyCollapse"
-            >
-              Company
-              <i class="fas fa-chevron-down float-end"></i>
-            </a>
-            <div class="collapse" id="companyCollapse">
-              <ul class="list-unstyled ps-3">
-                <li>
-                  <a href="about.html" class="mobile-nav-sublink">About Us</a>
-                </li>
-                <li>
-                  <a href="service-single.html" class="mobile-nav-sublink"
-                    >Stories</a
-                  >
-                </li>
-                <li>
-                  <a href="contact.html" class="mobile-nav-sublink"
-                    >Contact Us</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <!-- Stories Link -->
-          <li class="mobile-nav-item">
-            <a href="#" class="mobile-nav-link">Stories</a>
-          </li>
-        </ul>
-        <!-- Mobile Action Buttons -->
-        <div class="mobile-action-buttons mt-4">
-          <button class="mobile-btn-primary mb-3" onclick="location.href = '#'">
-            Get Started
-          </button>
-          <button class="mobile-btn-secondary" onclick="location.href = '#'">
-            Log in
-          </button>
-        </div>
-        <!-- Social Media Icons -->
-        <div class="mt-4">
-          <p class="fw-bold text-dark">Follow Us:</p>
-          <div class="d-flex gap-3">
-             <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
+      <div class="preloader-mark"><i class="fa-solid fa-shield-check"></i></div>
+      <strong>BetControl</strong>
+      <span class="preloader-line"><span></span></span>
     </div>
-    <!-- Offcanvas End -->
-
-    <!-- Header Start -->
-    <header class="main-header">
-      <div class="header-sticky">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <!-- Logo Start -->
-            <a class="navbar-brand" href="index.html">
-              <img src="images/Logo.svg" alt="Logo" width="150" height="" />
-            </a>
-            <!-- Logo End -->
-
-            <!-- Mobile Offcanvas Toggle Button - Shows only on mobile -->
-            <button
-              class="btn d-lg-none"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavBetControl"
-              aria-controls="offcanvasNavBetControl"
-            >
-              <i
-                class="fas fa-bars"
-                style="font-size: 24px; color: #1a3b5d"
-              ></i>
-            </button>
-
-            <!-- Desktop Menu - Hidden on mobile -->
-            <div class="collapse navbar-collapse main-menu d-none d-lg-block">
-              <div class="nav-menu-wrapper">
-                <ul class="navbar-nav mr-auto" id="menu">
-                  <li class="nav-item submenu">
-                    <a class="nav-link" href="#">Solutions</a>
-                    <ul>
-                      <li class="nav-item">
-                        <a class="nav-link" href="bettors.html">Bettors</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="parents.html">Parents</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="family&friends.html"
-                          >Families</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="entreprise.html"
-                          >Enterprise</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="mobile-nav-item">
-                    <a href="#" class="mobile-nav-link">features</a>
-                  </li>
-                  <li class="nav-item submenu">
-                    <a class="nav-link" href="#">Company</a>
-                    <ul>
-                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="service-single.html"
-                          >Stories</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Stories</a>
-                  </li>
-                </ul>
-              </div>
-              <!-- Header Btn Start -->
-              <div class="header-btn d-inline-flex">
-                <a href="">
-                  <button class="header-btn1">Get Started</button>
-                </a>
-                <a href="">
-                  <button class="header-btn2">Log in</button>
-                </a>
-              </div>
-              <!-- Header Btn End -->
-            </div>
-            <!-- Desktop Menu End -->
-          </div>
+    <header class="bettors-header">
+      <div class="bettors-container bettors-nav" id="bettorsNav">
+        <a href="index.html" aria-label="BetControl home"
+          ><img class="bettors-logo" src="images/Logo(W).svg" alt="BetControl"
+        /></a>
+        <nav class="bettors-nav-links" aria-label="Main navigation">
+          <a href="#tools">Your tools</a><a href="#why">Why BetControl</a
+          ><a href="#steps">How it works</a
+          ><a href="index.html#solutions">Other solutions</a>
         </nav>
+        <div class="bettors-nav-actions">
+          <a class="bettors-login" href="#download">Log in</a
+          ><a class="bettors-button" href="#download"
+            >Get started
+            <i class="fa-solid fa-arrow-up-right-from-square"></i></a
+          ><button
+            class="bettors-menu"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
       </div>
     </header>
-    <!-- Header End -->
 
-    <!-- Hero Section -->
-    <section class="hero-section" style="margin-top: 76px">
-      <div class="container">
-        <div class="support-badge fade-in-up">
-          <i class="fa fa-heart"></i>
-          <span>Non-judgemental support</span>
-        </div>
-        <h1 class="hero-title fade-in-up delay-1">
-          Take Control of<br />
-          <span class="highlight">Your Betting</span>
-        </h1>
-        <p class="hero-subtitle fade-in-up delay-2">
-          Stay in charge of your habits, track your spending, and block yourself
-          when you need to. BetControl is your personal coach empowering, not
-          judging.
-        </p>
-        <div class="hero-buttons fade-in-up delay-3">
-          <button class="btn-primary-hero">Start Self Assessment</button>
-          <button class="btn-secondary-hero">Get the App</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tools Section -->
-    <section class="tools-section">
-      <div class="container">
-        <div class="text-center mb-5">
-          <div class="section-label">YOUR TOOLKIT</div>
-          <h2 class="section-title">Tools Built for You</h2>
-        </div>
-        <div class="row g-4">
-          <div class="col-lg-4 col-md-6">
-            <div class="tool-card">
-              <div class="tool-icon">
-                <i class="fas fa-clipboard-check"></i>
-              </div>
-              <h3 class="tool-title">Self-Assessment</h3>
-              <p class="tool-description">
-                Understand your gambling patterns with our confidential
-                assessment tool.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="tool-card">
-              <div class="tool-icon">
-                <i class="fas fa-wallet"></i>
-              </div>
-              <h3 class="tool-title">Self-Assessment</h3>
-              <p class="tool-description">
-                Understand your gambling patterns with our confidential
-                assessment tool.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="tool-card">
-              <div class="tool-icon">
-                <i class="fas fa-chart-line"></i>
-              </div>
-              <h3 class="tool-title">Self-Assessment</h3>
-              <p class="tool-description">
-                Understand your gambling patterns with our confidential
-                assessment tool.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="tool-card">
-              <div class="tool-icon">
-                <i class="fas fa-ban"></i>
-              </div>
-              <h3 class="tool-title">Self-Assessment</h3>
-              <p class="tool-description">
-                Understand your gambling patterns with our confidential
-                assessment tool.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="tool-card">
-              <div class="tool-icon">
-                <i class="fas fa-comments"></i>
-              </div>
-              <h3 class="tool-title">Self-Assessment</h3>
-              <p class="tool-description">
-                Understand your gambling patterns with our confidential
-                assessment tool.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="tool-card">
-              <div class="tool-icon">
-                <i class="fas fa-users"></i>
-              </div>
-              <h3 class="tool-title">Self-Assessment</h3>
-              <p class="tool-description">
-                Understand your gambling patterns with our confidential
-                assessment tool.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Choose Section -->
-    <section class="why-choose-section">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-5 mb-lg-0">
-            <div class="why-label">WHY CHOOSE US</div>
-            <h2 class="why-title">Why Bettors Choose BetControl</h2>
-            <p class="why-subtitle">
-              We're not here to lecture you. We're here to give you the tools to
-              make better decisions on your own terms.
+    <main>
+      <section class="bettors-hero">
+        <div class="bettors-container bettors-hero-grid">
+          <div>
+            <div class="bettors-eyebrow">For bettors, by intention</div>
+            <h1>You are more than <span>the habit.</span></h1>
+            <p class="bettors-hero-copy">
+              BetControl helps you put space between an impulse and an action.
+              Understand your patterns, block the noise, and build a way forward
+              that feels like yours.
             </p>
-            <div class="benefits-list">
-              <div class="benefit-item">
-                <div class="benefit-icon">
-                  <i class="fas fa-check"></i>
-                </div>
-                <div class="benefit-text">
-                  Non-judgmental, empowering approach
-                </div>
+            <div class="bettors-hero-actions">
+              <a
+                class="bettors-button"
+                href="https://apps.apple.com/ng/app/betcontrol-app/id6780046668"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Download for iPhone <i class="fa-solid fa-arrow-right"></i></a
+              ><a
+                class="bettors-button bettors-outline"
+                href="https://play.google.com/store/apps/details?id=com.betcontrol.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Get it on Android <i class="fa-brands fa-android"></i
+              ></a>
+            </div>
+            <div class="bettors-note">
+              <i class="fa-solid fa-shield-halved"></i> Private, practical, and
+              built without judgement.
+            </div>
+          </div>
+          <div class="bettors-visual">
+            <div class="bettors-phone">
+              <img
+                src="images/Mockup.svg"
+                alt="BetControl app progress and protection tools"
+              />
+              <div class="bettors-status status-lock">
+                <i class="fa-solid fa-lock"></i> Boundary protected
               </div>
-              <div class="benefit-item">
-                <div class="benefit-icon">
-                  <i class="fas fa-check"></i>
-                </div>
-                <div class="benefit-text">
-                  You stay in control, we just provide the tools
-                </div>
-              </div>
-              <div class="benefit-item">
-                <div class="benefit-icon">
-                  <i class="fas fa-check"></i>
-                </div>
-                <div class="benefit-text">
-                  Complete privacy, your data is never shared
-                </div>
-              </div>
-              <div class="benefit-item">
-                <div class="benefit-icon">
-                  <i class="fas fa-check"></i>
-                </div>
-                <div class="benefit-text">
-                  Built by people who understand the struggle
-                </div>
-              </div>
-              <div class="benefit-item">
-                <div class="benefit-icon">
-                  <i class="fas fa-check"></i>
-                </div>
-                <div class="benefit-text">
-                  Works alongside your existing routines
-                </div>
+              <div class="bettors-status status-score">
+                <i class="fa-solid fa-chart-line"></i> 6 days on track
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="image-placeholder">Image Placeholder</div>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">
-            <div class="cta-badge">
-              <i class="fas fa-bolt"></i>
-              <span>Free to start</span>
-            </div>
-            <h2 class="cta-title">Your First Step Starts Here</h2>
-            <p class="cta-text">
-              Take our free, confidential self-assessment and discover your path
-              to control.
-            </p>
-            <button class="btn-cta-green">Get Started</button>
-          </div>
+      <section
+        class="bettors-container bettors-strip"
+        aria-label="BetControl benefits"
+      >
+        <div class="bettors-strip-item">
+          <i class="fa-solid fa-ban"></i
+          ><span><strong>Block</strong>supported betting sites</span>
         </div>
-      </div>
-    </section>
+        <div class="bettors-strip-item">
+          <i class="fa-solid fa-hourglass-half"></i
+          ><span><strong>Pause</strong>before a trigger becomes action</span>
+        </div>
+        <div class="bettors-strip-item">
+          <i class="fa-solid fa-heart"></i
+          ><span><strong>Build</strong>habits that support your goals</span>
+        </div>
+      </section>
 
-    <!-- Footer -->
-    <footer class="footer" id="company">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 mb-4">
-            <div class="footer-brand">
-              <img src="images/Logo.svg" alt="" />
-            </div>
-            <p class="footer-text">
-              BetControl is dedicated to helping individuals take control of
-              their gambling behaviors through technology, community support,
-              and professional guidance.
+      <section class="bettors-section bettors-soft" id="tools">
+        <div class="bettors-container">
+          <div class="bettors-heading center">
+            <div class="bettors-eyebrow">Your toolkit</div>
+            <h2>Small tools. Real breathing room.</h2>
+            <p>
+              Choose the support that fits your day. BetControl is designed to
+              be useful in the moments when willpower is not enough.
             </p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-x-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="bettors-tools">
+            <article class="bettors-tool">
+              <i class="fa-solid fa-clipboard-check"></i>
+              <h3>See your patterns</h3>
+              <p>
+                Use a confidential assessment to understand your triggers and
+                identify the support you want.
+              </p>
+            </article>
+            <article class="bettors-tool">
+              <i class="fa-solid fa-ban"></i>
+              <h3>Block distractions</h3>
+              <p>
+                Restrict supported betting and gambling websites when you need a
+                stronger boundary.
+              </p>
+            </article>
+            <article class="bettors-tool">
+              <i class="fa-solid fa-key"></i>
+              <h3>Protect your promise</h3>
+              <p>
+                Use PIN protection and time locks to make your intentions easier
+                to keep.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="bettors-section" id="why">
+        <div class="bettors-container bettors-story">
+          <div>
+            <div class="bettors-heading">
+              <div class="bettors-eyebrow">A different kind of support</div>
+              <h2>
+                No lectures. Just tools that put you back in the driver’s seat.
+              </h2>
+              <p>
+                You decide what progress looks like. BetControl gives you a
+                calm, private layer of accountability to help you get there.
+              </p>
+            </div>
+            <div class="bettors-checks">
+              <div class="bettors-check">
+                <i class="fa-solid fa-check"></i
+                ><span>Non-judgemental and built around your goals.</span>
+              </div>
+              <div class="bettors-check">
+                <i class="fa-solid fa-check"></i
+                ><span
+                  >Useful protection for the moments that feel hardest.</span
+                >
+              </div>
+              <div class="bettors-check">
+                <i class="fa-solid fa-check"></i
+                ><span
+                  >Progress you can see without turning your life into a
+                  spreadsheet.</span
+                >
+              </div>
+              <div class="bettors-check">
+                <i class="fa-solid fa-check"></i
+                ><span>Available on iPhone and Android.</span>
+              </div>
             </div>
           </div>
-          <div class="col-lg-2 col-md-4 col-6 mb-4">
-            <h4 class="footer-title">Solutions</h4>
-            <ul class="footer-links">
-              <li><a href="#">For Bettors</a></li>
-              <li><a href="#">For Parents</a></li>
-              <li><a href="#">For Families</a></li>
-              <li><a href="#">Enterprise</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 mb-4">
-            <h4 class="footer-title">Features</h4>
-            <ul class="footer-links">
-              <li><a href="#">Assessment</a></li>
-              <li><a href="#">Budgeting</a></li>
-              <li><a href="#">Site Blocking</a></li>
-              <li><a href="#">Therapy</a></li>
-              <li><a href="#">Community</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 mb-4">
-            <h4 class="footer-title">Company</h4>
-            <ul class="footer-links">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Our Mission</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Press</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 mb-4" id="support">
-            <h4 class="footer-title">Support</h4>
-            <ul class="footer-links">
-              <li><a href="#">Help Center</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Resources</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
+          <div
+            class="bettors-dashboard"
+            aria-label="BetControl progress preview"
+          >
+            <div class="dashboard-top">
+              <strong>Your progress</strong
+              ><span>This week <i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="dashboard-score">
+              <small>CONTROL SCORE</small><strong>78%</strong>
+              <div class="dashboard-line"><span></span></div>
+              <div class="dashboard-labels">
+                <span><strong>12</strong>sites blocked</span
+                ><span><strong>06</strong>days on track</span
+                ><span><strong>+18%</strong>this week</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="footer-bottom">
-          © 2025 BetControl. Technology by 2025. All rights reserved.
+      </section>
+
+      <section class="bettors-section bettors-soft" id="steps">
+        <div class="bettors-container">
+          <div class="bettors-heading center">
+            <div class="bettors-eyebrow">Start where you are</div>
+            <h2>A little distance can change the next decision.</h2>
+          </div>
+          <div class="bettors-steps">
+            <article class="bettors-step">
+              <div class="bettors-step-number">01 / NOTICE</div>
+              <h3>Understand the moment</h3>
+              <p>
+                Recognize the routines and triggers that shape your betting
+                habits.
+              </p>
+            </article>
+            <article class="bettors-step">
+              <div class="bettors-step-number">02 / PROTECT</div>
+              <h3>Set your boundary</h3>
+              <p>
+                Choose a blocker, PIN, or time lock that creates space before
+                action.
+              </p>
+            </article>
+            <article class="bettors-step">
+              <div class="bettors-step-number">03 / BUILD</div>
+              <h3>Keep your momentum</h3>
+              <p>
+                Track the small wins and reconnect with the reasons you started.
+              </p>
+            </article>
+          </div>
         </div>
+      </section>
+
+      <section class="bettors-cta" id="download">
+        <div class="bettors-container">
+          <div>
+            <h2>Ready to make your next choice a little easier?</h2>
+            <p>
+              Start with BetControl today. Free to begin, available wherever you
+              are.
+            </p>
+          </div>
+          <div class="bettors-hero-actions">
+            <a
+              class="bettors-button"
+              href="https://apps.apple.com/ng/app/betcontrol-app/id6780046668"
+              target="_blank"
+              rel="noopener noreferrer"
+              >iPhone <i class="fa-brands fa-apple"></i></a
+            ><a
+              class="bettors-button bettors-outline"
+              href="https://play.google.com/store/apps/details?id=com.betcontrol.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Android <i class="fa-brands fa-android"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bettors-footer">
+      <div class="bettors-container">
+        <a href="index.html"
+          ><img src="images/Logo(W).svg" alt="BetControl"
+        /></a>
+        <div class="bettors-footer-links">
+          <a href="index.html">Home</a><a href="index.html#features">Features</a
+          ><a href="parents.html">Parents</a
+          ><a href="family&friends.html">Families</a
+          ><a href="entreprise.html">Enterprise</a
+          ><a
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            >Privacy</a
+          >
+        </div>
+        <span>© 2026 BetControl</span>
       </div>
     </footer>
-    <!-- Footer end -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/animations.js"></script>
-    <!-- <script src="js/mobile-menu.js"></script> -->
+    <script>
+      window.addEventListener("load", () => {
+        document.body.classList.add("page-ready");
+        window.setTimeout(
+          () => document.getElementById("sitePreloader")?.remove(),
+          1100,
+        );
+      });
+      const bettorsNav = document.getElementById("bettorsNav");
+      const bettorsMenu = document.querySelector(".bettors-menu");
+      bettorsMenu.addEventListener("click", () => {
+        const isOpen = bettorsNav.classList.toggle("mobile-open");
+        bettorsMenu.setAttribute("aria-expanded", String(isOpen));
+        bettorsMenu.innerHTML = isOpen
+          ? '<i class="fa-solid fa-xmark"></i>'
+          : '<i class="fa-solid fa-bars"></i>';
+      });
+    </script>
   </body>
 </html>
+

@@ -1,592 +1,331 @@
 <!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enterprise - BetControl</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
+    <meta
+      name="description"
+      content="BetControl helps organizations build responsible gambling support into their programs, policies, and communities."
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <title>For Organizations | BetControl</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <!-- Flaticon Uicons CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons/css/all/all.css"
-    />
-    <!-- Font-awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <!-- Favicon logo -->
-    <link rel="shortcut icon" href="images/favicon.png" type="favicon.png" />
-    <!-- responsive css -->
-    <link rel="stylesheet" href="css/responsive.css" />
-    <!-- animation css -->
-    <link rel="stylesheet" href="css/animation.css" />
-    <!-- main css -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/animations-enhanced.css" />
-    <!-- page css -->
-    <link rel="stylesheet" href="css/enterprise.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="css/organization-home.css" />
   </head>
-  <body>
-    <!-- Preloader Start -->
-    <div class="preloader" id="preloader">
-      <div class="dot-loader">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-    <!-- Preloader End -->
-
-    <!-- Offcanvas for Mobile Navigation -->
+  <body class="organization-page">
     <div
-      class="offcanvas offcanvas-end"
-      tabindex="-1"
-      id="offcanvasNavBetControl"
-      aria-labelledby="offcanvasNavBetControlLabel"
+      class="site-preloader"
+      id="sitePreloader"
+      role="status"
+      aria-label="Loading BetControl"
     >
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavBetControlLabel">
-          <img
-            src="images/Logo(W).svg"
-            alt="Logo"
-            class="img-fluid"
-            style="max-width: 150px"
-          />
-        </h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="offcanvas-body">
-        <!-- Mobile Navigation Menu -->
-        <ul class="list-unstyled mobile-nav-menu">
-          <!-- Solutions Dropdown -->
-          <li class="mobile-nav-item">
-            <a
-              class="mobile-nav-link"
-              data-bs-toggle="collapse"
-              href="#solutionsCollapse"
-              role="button"
-              aria-expanded="false"
-              aria-controls="solutionsCollapse"
-            >
-              Solutions
-              <i class="fas fa-chevron-down float-end"></i>
-            </a>
-            <div class="collapse" id="solutionsCollapse">
-              <ul class="list-unstyled ps-3">
-                <li>
-                  <a href="bettors.html" class="mobile-nav-sublink">Bettors</a>
-                </li>
-                <li>
-                  <a href="parents.html" class="mobile-nav-sublink">Parents</a>
-                </li>
-                <li>
-                  <a href="family&friends.html" class="mobile-nav-sublink"
-                    >Families</a
-                  >
-                </li>
-                <li>
-                  <a href="entreprise.html" class="mobile-nav-sublink"
-                    >Enterprise</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-          <!-- features -->
-          <li class="mobile-nav-item">
-            <a href="#" class="mobile-nav-link">features</a>
-          </li>
-
-          <!-- Company Dropdown -->
-          <li class="mobile-nav-item">
-            <a
-              class="mobile-nav-link"
-              data-bs-toggle="collapse"
-              href="#companyCollapse"
-              role="button"
-              aria-expanded="false"
-              aria-controls="companyCollapse"
-            >
-              Company
-              <i class="fas fa-chevron-down float-end"></i>
-            </a>
-            <div class="collapse" id="companyCollapse">
-              <ul class="list-unstyled ps-3">
-                <li>
-                  <a href="about.html" class="mobile-nav-sublink">About Us</a>
-                </li>
-                <li>
-                  <a href="service-single.html" class="mobile-nav-sublink"
-                    >Stories</a
-                  >
-                </li>
-                <li>
-                  <a href="contact.html" class="mobile-nav-sublink"
-                    >Contact Us</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <!-- Stories Link -->
-          <li class="mobile-nav-item">
-            <a href="#" class="mobile-nav-link">Stories</a>
-          </li>
-        </ul>
-        <!-- Mobile Action Buttons -->
-        <div class="mobile-action-buttons mt-4">
-          <button class="mobile-btn-primary mb-3" onclick="location.href = '#'">
-            Get Started
-          </button>
-          <button class="mobile-btn-secondary" onclick="location.href = '#'">
-            Log in
-          </button>
-        </div>
-        <!-- Social Media Icons -->
-        <div class="mt-4">
-          <p class="fw-bold text-dark">Follow Us:</p>
-          <div class="d-flex gap-3">
-             <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
+      <div class="preloader-mark"><i class="fa-solid fa-shield-check"></i></div>
+      <strong>BetControl</strong>
+      <span class="preloader-line"><span></span></span>
     </div>
-    <!-- Offcanvas End -->
-
-    <!-- Header Start -->
-    <header class="main-header">
-      <div class="header-sticky">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <!-- Logo Start -->
-            <a class="navbar-brand" href="index.html">
-              <img src="images/Logo.svg" alt="Logo" width="150" height="" />
-            </a>
-            <!-- Logo End -->
-
-            <!-- Mobile Offcanvas Toggle Button - Shows only on mobile -->
-            <button
-              class="btn d-lg-none"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavBetControl"
-              aria-controls="offcanvasNavBetControl"
-            >
-              <i
-                class="fas fa-bars"
-                style="font-size: 24px; color: #1a3b5d"
-              ></i>
-            </button>
-
-            <!-- Desktop Menu - Hidden on mobile -->
-            <div class="collapse navbar-collapse main-menu d-none d-lg-block">
-              <div class="nav-menu-wrapper">
-                <ul class="navbar-nav mr-auto" id="menu">
-                  <li class="nav-item submenu">
-                    <a class="nav-link" href="#">Solutions</a>
-                    <ul>
-                      <li class="nav-item">
-                        <a class="nav-link" href="bettors.html">Bettors</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="parents.html">Parents</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="family&friends.html"
-                          >Families</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="entreprise.html"
-                          >Enterprise</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="mobile-nav-item">
-                    <a href="#" class="mobile-nav-link">features</a>
-                  </li>
-                  <li class="nav-item submenu">
-                    <a class="nav-link" href="#">Company</a>
-                    <ul>
-                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="service-single.html"
-                          >Stories</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Stories</a>
-                  </li>
-                </ul>
-              </div>
-              <!-- Header Btn Start -->
-              <div class="header-btn d-inline-flex">
-                <a href="">
-                  <button class="header-btn1">Get Started</button>
-                </a>
-                <a href="">
-                  <button class="header-btn2">Log in</button>
-                </a>
-              </div>
-              <!-- Header Btn End -->
-            </div>
-            <!-- Desktop Menu End -->
-          </div>
+    <header class="organization-header">
+      <div class="organization-container organization-nav" id="organizationNav">
+        <a href="index.html" aria-label="BetControl home"
+          ><img
+            class="organization-logo"
+            src="images/Logo(W).svg"
+            alt="BetControl"
+        /></a>
+        <nav class="organization-links" aria-label="Main navigation">
+          <a href="#programs">Programs</a><a href="#partner">Partnership</a
+          ><a href="#steps">How it works</a
+          ><a href="index.html#solutions">Other solutions</a>
         </nav>
+        <div class="organization-actions">
+          <a class="organization-login" href="#contact">Log in</a
+          ><a class="organization-button" href="#contact"
+            >Talk to us
+            <i class="fa-solid fa-arrow-up-right-from-square"></i></a
+          ><button
+            class="organization-menu"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
       </div>
     </header>
-    <!-- Header End -->
 
-    <!-- Hero Section -->
-    <section class="hero-section" style="margin-top: 76px">
-      <div class="container">
-        <div class="trust-badge fade-in-up">
-          <i class="fas fa-shield-check"></i>
-          <span>Trusted by 500+ Organizations</span>
-        </div>
-        <h1 class="hero-title fade-in-up delay-1">
-          Protect Your Community from
-        </h1>
-        <h2 class="hero-title-second fade-in-up delay-1">Gambling Harm</h2>
-        <p class="hero-subtitle fade-in-up delay-2">
-          BetControl helps schools, religious institutions, sports and
-          government agencies protect their communities with scalable blocking
-          tools and impact reporting.
-        </p>
-        <div class="hero-buttons fade-in-up delay-3">
-          <button class="btn-primary-hero">Book a Demo</button>
-          <button class="btn-secondary-hero">Get a Quote</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Built for Scale Section -->
-    <section class="scale-section">
-      <div class="container">
-        <div class="text-center mb-5">
-          <div class="scale-label">ENTERPRISE READY</div>
-          <h2 class="scale-title">Built for Scale</h2>
-        </div>
-        <div class="row g-4">
-          <div class="col-lg-4 col-md-4">
-            <div class="scale-card">
-              <div class="scale-icon">
-                <i class="fas fa-ban"></i>
-              </div>
-              <h3 class="scale-card-title">Site & App Blocking at Scale</h3>
-              <p class="scale-card-description">
-                Deploy BetControl across thousands of devices with centralized
-                management, instant updates and detailed reporting.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4">
-            <div class="scale-card">
-              <div class="scale-icon">
-                <i class="fas fa-mobile-alt"></i>
-              </div>
-              <h3 class="scale-card-title">Device-Level Deployment</h3>
-              <p class="scale-card-description">
-                With SSO and device management integration, install BetControl
-                on work phones, laptops and tablets.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4">
-            <div class="scale-card">
-              <div class="scale-icon">
-                <i class="fas fa-chart-bar"></i>
-              </div>
-              <h3 class="scale-card-title">Dashboard & Reporting</h3>
-              <p class="scale-card-description">
-                See real-time data on protection compliance and gambling
-                behavior trends in your community.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- For Every Organization Section -->
-    <section class="organization-section">
-      <div class="container">
-        <div class="text-center mb-5">
-          <div class="org-label">TAILORED SOLUTIONS</div>
-          <h2 class="org-title">For Every Organization</h2>
-        </div>
-        <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <div class="org-card">
-              <div class="org-icon">
-                <i class="fas fa-graduation-cap"></i>
-              </div>
-              <h3 class="org-card-title">Schools & Universities</h3>
-              <p class="org-card-description">
-                Shield your students from gambling access on school-issued
-                devices and networks.
-              </p>
-              <ul class="org-list">
-                <li>Classroom-first application</li>
-                <li>Digital student protection</li>
-                <li>Reporting for admin teams</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <div class="org-card">
-              <div class="org-icon">
-                <i class="fas fa-praying-hands"></i>
-              </div>
-              <h3 class="org-card-title">Churches & Mosques</h3>
-              <p class="org-card-description">
-                Support your members in living clean, addiction-free lives
-                aligned with faith values.
-              </p>
-              <ul class="org-list">
-                <li>Toolkits and resources</li>
-                <li>Pastoral support tools</li>
-                <li>Accountability partners</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <div class="org-card">
-              <div class="org-icon">
-                <i class="fas fa-heart"></i>
-              </div>
-              <h3 class="org-card-title">NGOs & Addiction Programs</h3>
-              <p class="org-card-description">
-                Provide BetControl as part of your recovery initiatives with
-                tools that block the impulse.
-              </p>
-              <ul class="org-list">
-                <li>Non-profits pricing</li>
-                <li>Recovery-first resources</li>
-                <li>Impact reporting for funders</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <div class="org-card">
-              <div class="org-icon">
-                <i class="fas fa-landmark"></i>
-              </div>
-              <h3 class="org-card-title">Government Agencies</h3>
-              <p class="org-card-description">
-                Deploy across public programs at a public health-level.
-                Available for public health initiatives.
-              </p>
-              <ul class="org-list">
-                <li>Public-sector pricing</li>
-                <li>Confidential outreach</li>
-                <li>Policy compliance reporting</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6">
-            <div class="stat-item">
-              <div class="stat-number">500+</div>
-              <div class="stat-label">Organizations</div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stat-item">
-              <div class="stat-number">100K+</div>
-              <div class="stat-label">Protected</div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stat-item">
-              <div class="stat-number">15+</div>
-              <div class="stat-label">Years Covered</div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stat-item">
-              <div class="stat-number">99.9%</div>
-              <div class="stat-label">Uptime</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Organizations Section -->
-    <section class="why-org-section">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-5 mb-lg-0">
-            <div class="why-label">PARTNERING</div>
-            <h2 class="why-title">Why Organizations Partner with Us</h2>
-            <p class="why-subtitle">
-              BetControl provides the infrastructure to protect your community
-              effectively and measure your impact.
+    <main>
+      <section class="organization-hero">
+        <div class="organization-container organization-hero-grid">
+          <div>
+            <div class="organization-eyebrow">For organizations</div>
+            <h1>Build a culture of <span>healthier choices.</span></h1>
+            <p class="organization-hero-copy">
+              Whether you support employees, students, members, or a wider
+              community, BetControl helps you make responsible gambling support
+              easier to start and easier to talk about.
             </p>
-            <div class="why-list">
-              <div class="why-item">
-                <div class="why-icon">
-                  <i class="fas fa-check"></i>
-                </div>
-                <div class="why-text">Scalable to any organization size</div>
+            <div class="organization-actions-row">
+              <a class="organization-button" href="#contact"
+                >Start a conversation <i class="fa-solid fa-arrow-right"></i></a
+              ><a
+                class="organization-button organization-outline"
+                href="#programs"
+                >Explore the approach <i class="fa-solid fa-arrow-down"></i
+              ></a>
+            </div>
+            <div class="organization-note">
+              <i class="fa-solid fa-shield-heart"></i> Designed to complement
+              your existing wellbeing and safeguarding work.
+            </div>
+          </div>
+          <div class="organization-visual">
+            <div class="organization-board">
+              <div class="board-top">
+                <strong>Responsible support plan</strong
+                ><span>Draft <i class="fa-solid fa-chevron-down"></i></span>
               </div>
-              <div class="why-item">
-                <div class="why-icon">
-                  <i class="fas fa-check"></i>
+              <div class="board-score">
+                <small>PROGRAM FOCUS</small>
+                <h2>Protect the person, not just the policy.</h2>
+                <div class="board-line"><span></span></div>
+                <div class="board-items">
+                  <div class="board-item">
+                    <i class="fa-solid fa-check"></i> Clear education and
+                    awareness
+                  </div>
+                  <div class="board-item">
+                    <i class="fa-solid fa-check"></i> Private routes to
+                    practical tools
+                  </div>
+                  <div class="board-item">
+                    <i class="fa-solid fa-check"></i> Support that respects
+                    personal agency
+                  </div>
                 </div>
-                <div class="why-text">Dedicated account management</div>
-              </div>
-              <div class="why-item">
-                <div class="why-icon">
-                  <i class="fas fa-check"></i>
-                </div>
-                <div class="why-text">Custom onboarding and training</div>
-              </div>
-              <div class="why-item">
-                <div class="why-icon">
-                  <i class="fas fa-check"></i>
-                </div>
-                <div class="why-text">Visibility of long-term impact</div>
-              </div>
-              <div class="why-item">
-                <div class="why-icon">
-                  <i class="fas fa-check"></i>
-                </div>
-                <div class="why-text">Transparent pricing for stakeholders</div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="image-placeholder">Image Placeholder</div>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Final CTA Section -->
-    <section class="final-cta-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">
-            <div class="cta-badge">
-              <i class="fas fa-headset"></i>
-              <span>Custom pricing available</span>
-            </div>
-            <h2 class="cta-title">Let's Protect Your Community</h2>
-            <p class="cta-text">
-              Schedule a demo to see how BetControl can work for your
-              organization.
-            </p>
-            <button class="btn-cta-green">Get Started</button>
-          </div>
+      <section
+        class="organization-container organization-strip"
+        aria-label="Organization support principles"
+      >
+        <div class="organization-strip-item">
+          <i class="fa-solid fa-bullseye"></i
+          ><span><strong>Purposeful</strong>built around your goals</span>
         </div>
-      </div>
-    </section>
+        <div class="organization-strip-item">
+          <i class="fa-solid fa-people-group"></i
+          ><span><strong>Human</strong>support that respects dignity</span>
+        </div>
+        <div class="organization-strip-item">
+          <i class="fa-solid fa-route"></i
+          ><span><strong>Practical</strong>clear next steps for people</span>
+        </div>
+      </section>
 
-    <!-- Footer -->
-    <footer class="footer" id="company">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 mb-4">
-            <div class="footer-brand">
-              <img src="images/Logo.svg" alt="" />
-            </div>
-            <p class="footer-text">
-              BetControl is dedicated to helping individuals take control of
-              their gambling behaviors through technology, community support,
-              and professional guidance.
+      <section class="organization-section organization-soft" id="programs">
+        <div class="organization-container">
+          <div class="organization-heading center">
+            <div class="organization-eyebrow">A flexible starting point</div>
+            <h2>Make responsible support part of the everyday.</h2>
+            <p>
+              Every organization has a different role to play. Start with the
+              people you serve, the risks you see, and the support you can
+              sustain.
             </p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-x-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="organization-grid">
+            <article class="organization-card">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <h3>Education and awareness</h3>
+              <p>
+                Give people clearer language for gambling harm, digital habits,
+                and where to find help.
+              </p>
+            </article>
+            <article class="organization-card">
+              <i class="fa-solid fa-handshake-angle"></i>
+              <h3>Member and employee support</h3>
+              <p>
+                Offer a private path toward healthier boundaries without turning
+                support into surveillance.
+              </p>
+            </article>
+            <article class="organization-card">
+              <i class="fa-solid fa-heart-pulse"></i>
+              <h3>Community partnerships</h3>
+              <p>
+                Bring practical tools into wellbeing, recovery, safeguarding, or
+                public-health initiatives.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="organization-section" id="partner">
+        <div class="organization-container organization-partner">
+          <div>
+            <div class="organization-heading">
+              <div class="organization-eyebrow">A thoughtful partnership</div>
+              <h2>Start with the problem you are actually trying to solve.</h2>
+              <p>
+                We can help you shape a responsible path from awareness to
+                action. That might mean a resource hub, a referral route, or a
+                clearer way to introduce BetControl to the people you support.
+              </p>
+            </div>
+            <div class="organization-list">
+              <div class="organization-list-item">
+                <i class="fa-solid fa-check"></i
+                ><span
+                  >Map the people, moments, and environments that need
+                  support.</span
+                >
+              </div>
+              <div class="organization-list-item">
+                <i class="fa-solid fa-check"></i
+                ><span
+                  >Choose language and resources that fit your community.</span
+                >
+              </div>
+              <div class="organization-list-item">
+                <i class="fa-solid fa-check"></i
+                ><span
+                  >Make space for privacy, consent, and personal agency.</span
+                >
+              </div>
+              <div class="organization-list-item">
+                <i class="fa-solid fa-check"></i
+                ><span
+                  >Review what is useful and improve the program over
+                  time.</span
+                >
+              </div>
             </div>
           </div>
-          <div class="col-lg-2 col-md-4 col-6 mb-4">
-            <h4 class="footer-title">Solutions</h4>
-            <ul class="footer-links">
-              <li><a href="#">For Bettors</a></li>
-              <li><a href="#">For Parents</a></li>
-              <li><a href="#">For Families</a></li>
-              <li><a href="#">Enterprise</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 mb-4">
-            <h4 class="footer-title">Features</h4>
-            <ul class="footer-links">
-              <li><a href="#">Assessment</a></li>
-              <li><a href="#">Budgeting</a></li>
-              <li><a href="#">Site Blocking</a></li>
-              <li><a href="#">Therapy</a></li>
-              <li><a href="#">Community</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 mb-4">
-            <h4 class="footer-title">Company</h4>
-            <ul class="footer-links">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Our Mission</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Press</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 mb-4" id="support">
-            <h4 class="footer-title">Support</h4>
-            <ul class="footer-links">
-              <li><a href="#">Help Center</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Resources</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
+          <div class="organization-plan">
+            <small>A SIMPLE FRAMEWORK</small>
+            <h3>Notice. Equip. Connect.</h3>
+            <p>
+              Good support does not need to be complicated to be meaningful.
+            </p>
+            <div class="organization-plan-steps">
+              <div class="organization-plan-step">
+                <b>01</b> Notice the patterns and pressure points
+              </div>
+              <div class="organization-plan-step">
+                <b>02</b> Equip people with language and tools
+              </div>
+              <div class="organization-plan-step">
+                <b>03</b> Connect them to the next step
+              </div>
+            </div>
           </div>
         </div>
-        <div class="footer-bottom">
-          © 2025 BetControl. Technology by 2025. All rights reserved.
+      </section>
+
+      <section class="organization-section organization-soft" id="steps">
+        <div class="organization-container">
+          <div class="organization-heading center">
+            <div class="organization-eyebrow">A clear route forward</div>
+            <h2>Good intentions become useful when they have a plan.</h2>
+          </div>
+          <div class="organization-steps">
+            <article class="organization-step">
+              <div class="organization-step-number">01 / LISTEN</div>
+              <h3>Understand your context</h3>
+              <p>
+                Clarify who you support, what they need, and where current
+                systems leave gaps.
+              </p>
+            </article>
+            <article class="organization-step">
+              <div class="organization-step-number">02 / DESIGN</div>
+              <h3>Shape the support</h3>
+              <p>
+                Choose the messages, resources, and pathways that fit your
+                organization.
+              </p>
+            </article>
+            <article class="organization-step">
+              <div class="organization-step-number">03 / BEGIN</div>
+              <h3>Make the next step visible</h3>
+              <p>
+                Introduce practical help in a way people can understand, trust,
+                and use.
+              </p>
+            </article>
+          </div>
         </div>
+      </section>
+
+      <section class="organization-cta" id="contact">
+        <div class="organization-container">
+          <div>
+            <h2>Let’s make support easier to reach.</h2>
+            <p>
+              Tell us what your organization is working on and start a
+              conversation about a responsible next step.
+            </p>
+          </div>
+          <a class="organization-button" href="mailto:hello@usebetcontrol.com"
+            >Contact BetControl <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="organization-footer">
+      <div class="organization-container">
+        <a href="index.html"
+          ><img src="images/Logo(W).svg" alt="BetControl"
+        /></a>
+        <div class="organization-footer-links">
+          <a href="index.html">Home</a><a href="bettors.html">Bettors</a
+          ><a href="parents.html">Parents</a
+          ><a href="family&friends.html">Families</a
+          ><a
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            >Privacy</a
+          >
+        </div>
+        <span>© 2026 BetControl</span>
       </div>
     </footer>
-    <!-- Footer end -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/animations.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        document.body.classList.add("page-ready");
+        window.setTimeout(
+          () => document.getElementById("sitePreloader")?.remove(),
+          1100,
+        );
+      });
+      const organizationNav = document.getElementById("organizationNav");
+      const organizationMenu = document.querySelector(".organization-menu");
+      organizationMenu.addEventListener("click", () => {
+        const isOpen = organizationNav.classList.toggle("mobile-open");
+        organizationMenu.setAttribute("aria-expanded", String(isOpen));
+        organizationMenu.innerHTML = isOpen
+          ? '<i class="fa-solid fa-xmark"></i>'
+          : '<i class="fa-solid fa-bars"></i>';
+      });
+    </script>
   </body>
 </html>
+

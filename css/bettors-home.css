@@ -1,0 +1,708 @@
+:root {
+  --navy: #071b2b;
+  --navy-2: #103652;
+  --ink: #102a3f;
+  --muted: #647687;
+  --mist: #f3f8f5;
+  --mint: #7ad196;
+  --mint-dark: #4fae70;
+  --white: #fff;
+  --line: #dfeae4;
+  --yellow: #f5bd4c;
+}
+html {
+  scroll-behavior: smooth;
+}
+body.bettors-page {
+  margin: 0;
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
+}
+.site-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 14px;
+  background: var(--navy);
+  color: var(--white);
+  transition:
+    opacity 0.55s ease,
+    visibility 0.55s ease;
+}
+.page-ready .site-preloader {
+  opacity: 0;
+  visibility: hidden;
+}
+.preloader-mark {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border: 1px solid rgba(122, 209, 150, 0.6);
+  border-radius: 17px;
+  color: var(--mint);
+  font-size: 24px;
+  animation: preloader-pulse 1.4s ease-in-out infinite;
+}
+.site-preloader strong {
+  font-size: 18px;
+  letter-spacing: -0.03em;
+}
+.preloader-line {
+  width: 112px;
+  height: 3px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.16);
+}
+.preloader-line span {
+  display: block;
+  width: 45%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--mint);
+  animation: preloader-progress 1.2s ease-in-out infinite;
+}
+@keyframes preloader-pulse {
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 10px rgba(122, 209, 150, 0.06);
+  }
+}
+@keyframes preloader-progress {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(280%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .preloader-mark,
+  .preloader-line span {
+    animation: none;
+  }
+}
+.bettors-page * {
+  box-sizing: border-box;
+}
+.bettors-page a {
+  text-decoration: none;
+  color: inherit;
+}
+.bettors-page h1,
+.bettors-page h2,
+.bettors-page h3,
+.bettors-page p {
+  margin: 0;
+}
+.bettors-container {
+  width: min(1160px, calc(100% - 40px));
+  margin: auto;
+}
+.bettors-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  padding: 22px 0;
+  color: var(--white);
+}
+.bettors-header .bettors-container,
+.bettors-nav,
+.bettors-nav-links,
+.bettors-nav-actions {
+  display: flex;
+  align-items: center;
+}
+.bettors-nav {
+  justify-content: space-between;
+  gap: 28px;
+}
+.bettors-logo {
+  width: 142px;
+}
+.bettors-nav-links {
+  gap: 28px;
+  color: #c1d0d6;
+  font-size: 14px;
+}
+.bettors-nav-links a:hover {
+  color: var(--white);
+}
+.bettors-nav-actions {
+  gap: 12px;
+}
+.bettors-login {
+  padding: 10px 12px;
+  color: #c1d0d6;
+  font-size: 14px;
+}
+.bettors-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 19px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--mint);
+  color: var(--navy);
+  font-weight: 800;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+.bettors-button:hover {
+  transform: translateY(-2px);
+  background: #8be1a7;
+}
+.bettors-menu {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: var(--white);
+  font-size: 22px;
+}
+.bettors-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 148px 0 90px;
+  color: var(--white);
+  background:
+    radial-gradient(
+      circle at 83% 22%,
+      rgba(122, 209, 150, 0.18),
+      transparent 27%
+    ),
+    linear-gradient(130deg, var(--navy), var(--navy-2));
+}
+.bettors-hero:after {
+  content: "";
+  position: absolute;
+  right: -230px;
+  bottom: -360px;
+  width: 700px;
+  height: 700px;
+  border: 1px solid rgba(122, 209, 150, 0.2);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 65px rgba(122, 209, 150, 0.035),
+    0 0 0 130px rgba(122, 209, 150, 0.02);
+}
+.bettors-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 0.88fr 1.12fr;
+  gap: 60px;
+  align-items: center;
+}
+.bettors-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--mint);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.bettors-eyebrow:before {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background: currentColor;
+}
+.bettors-hero h1 {
+  max-width: 610px;
+  margin: 20px 0;
+  font-size: clamp(3.3rem, 6vw, 5.6rem);
+  line-height: 0.98;
+  letter-spacing: -0.07em;
+}
+.bettors-hero h1 span {
+  color: var(--mint);
+}
+.bettors-hero-copy {
+  max-width: 500px;
+  color: #bed0d5;
+  font-size: 17px;
+  line-height: 1.7;
+}
+.bettors-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+.bettors-outline {
+  background: transparent;
+  border: 1px solid rgba(122, 209, 150, 0.75);
+  color: var(--mint);
+}
+.bettors-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  color: #90a6af;
+  font-size: 12px;
+}
+.bettors-note i {
+  color: var(--mint);
+}
+.bettors-visual {
+  position: relative;
+  min-height: 430px;
+}
+.bettors-phone {
+  position: absolute;
+  inset: 0 -100px -40px -80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bettors-phone:before {
+  content: "";
+  position: absolute;
+  width: 390px;
+  height: 390px;
+  border-radius: 50%;
+  background: rgba(122, 209, 150, 0.13);
+}
+.bettors-phone img {
+  position: relative;
+  width: 100%;
+  filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.3));
+}
+.bettors-status {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 14px;
+  border: 1px solid #e9f2ed;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--ink);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+  font-weight: 800;
+}
+.bettors-status i {
+  color: var(--mint-dark);
+}
+.status-lock {
+  top: 92px;
+  left: 2%;
+}
+.status-score {
+  right: 1%;
+  bottom: 73px;
+}
+.bettors-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--line);
+}
+.bettors-strip-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.bettors-strip-item i {
+  color: var(--mint-dark);
+  font-size: 19px;
+}
+.bettors-strip-item strong {
+  display: block;
+  color: var(--ink);
+  font-size: 20px;
+}
+.bettors-section {
+  padding: 105px 0;
+}
+.bettors-soft {
+  background: var(--mist);
+}
+.bettors-heading {
+  max-width: 650px;
+  margin-bottom: 44px;
+}
+.bettors-heading.center {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+.bettors-heading h2 {
+  margin-top: 14px;
+  font-size: clamp(2.3rem, 4vw, 3.7rem);
+  line-height: 1.03;
+  letter-spacing: -0.06em;
+}
+.bettors-heading p {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.bettors-tools {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.bettors-tool {
+  min-height: 260px;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--white);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.bettors-tool:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 50px rgba(7, 27, 43, 0.1);
+}
+.bettors-tool i {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border-radius: 13px;
+  background: #e3f5e8;
+  color: var(--mint-dark);
+  font-size: 18px;
+}
+.bettors-tool h3 {
+  margin-top: 45px;
+  font-size: 20px;
+}
+.bettors-tool p {
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.bettors-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+.bettors-checks {
+  display: grid;
+  gap: 14px;
+  margin-top: 27px;
+}
+.bettors-check {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+.bettors-check i {
+  display: grid;
+  flex: 0 0 26px;
+  height: 26px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e3f5e8;
+  color: var(--mint-dark);
+  font-size: 11px;
+}
+.bettors-dashboard {
+  position: relative;
+  min-height: 420px;
+  padding: 33px;
+  border-radius: 28px;
+  background: var(--navy-2);
+  color: var(--white);
+  overflow: hidden;
+}
+.bettors-dashboard:after {
+  content: "";
+  position: absolute;
+  right: -120px;
+  bottom: -150px;
+  width: 390px;
+  height: 390px;
+  border: 1px solid rgba(122, 209, 150, 0.27);
+  border-radius: 50%;
+}
+.dashboard-top {
+  display: flex;
+  justify-content: space-between;
+  color: #9bb1b8;
+  font-size: 12px;
+}
+.dashboard-top strong {
+  color: var(--white);
+  font-size: 14px;
+}
+.dashboard-score {
+  margin-top: 58px;
+}
+.dashboard-score small {
+  color: var(--mint);
+  font-size: 12px;
+  font-weight: 800;
+}
+.dashboard-score strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 68px;
+  letter-spacing: -0.08em;
+}
+.dashboard-line {
+  height: 9px;
+  margin: 20px 0 15px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.12);
+}
+.dashboard-line span {
+  display: block;
+  width: 78%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--mint);
+}
+.dashboard-labels {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 30px;
+  color: #9bb1b8;
+  font-size: 12px;
+}
+.dashboard-labels strong {
+  display: block;
+  color: var(--white);
+  font-size: 18px;
+}
+.bettors-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 23px;
+}
+.bettors-step {
+  padding: 28px 0;
+  border-top: 2px solid var(--mint);
+}
+.bettors-step-number {
+  color: var(--mint-dark);
+  font-size: 12px;
+  font-weight: 800;
+}
+.bettors-step h3 {
+  margin-top: 40px;
+  font-size: 21px;
+}
+.bettors-step p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.bettors-cta {
+  padding: 82px 0;
+  color: var(--white);
+  background: var(--navy);
+}
+.bettors-cta .bettors-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.bettors-cta h2 {
+  max-width: 620px;
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+.bettors-cta p {
+  max-width: 440px;
+  margin-top: 14px;
+  color: #a9bdc5;
+  line-height: 1.6;
+}
+.bettors-footer {
+  padding: 38px 0;
+  background: #061522;
+  color: #91a6ae;
+  font-size: 12px;
+}
+.bettors-footer .bettors-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 25px;
+}
+.bettors-footer .bettors-container > a {
+  justify-self: start;
+}
+.bettors-footer .bettors-container > span {
+  justify-self: end;
+}
+.bettors-footer img {
+  width: 120px;
+}
+.bettors-footer-links {
+  display: flex;
+  gap: 22px;
+  justify-self: center;
+}
+.bettors-footer-links a:hover {
+  color: var(--white);
+}
+@media (max-width: 900px) {
+  .bettors-nav-links,
+  .bettors-login {
+    display: none;
+  }
+  .bettors-menu {
+    display: block;
+  }
+  .bettors-nav {
+    flex-wrap: wrap;
+  }
+  .bettors-nav.mobile-open .bettors-nav-links {
+    display: flex;
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding-top: 18px;
+  }
+  .bettors-hero-grid,
+  .bettors-story {
+    grid-template-columns: 1fr;
+  }
+  .bettors-visual {
+    min-height: 360px;
+  }
+  .bettors-phone {
+    inset: 0 -40px -20px;
+  }
+  .bettors-tools {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bettors-cta .bettors-container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+@media (max-width: 580px) {
+  .bettors-container {
+    width: calc(100% - 28px);
+  }
+  .bettors-header {
+    padding-top: 16px;
+  }
+  .bettors-logo {
+    width: 126px;
+  }
+  .bettors-button {
+    padding: 11px 13px;
+    font-size: 12px;
+  }
+  .bettors-hero {
+    padding-top: 130px;
+    padding-bottom: 56px;
+  }
+  .bettors-hero h1 {
+    font-size: clamp(3rem, 15vw, 4.3rem);
+  }
+  .bettors-hero-copy {
+    font-size: 15px;
+  }
+  .bettors-hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .bettors-visual {
+    min-height: 300px;
+    overflow: hidden;
+  }
+  .bettors-phone {
+    inset: 18px -35px 0;
+  }
+  .bettors-phone:before {
+    width: 260px;
+    height: 260px;
+  }
+  .bettors-status {
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+  .status-lock {
+    top: 26px;
+  }
+  .status-score {
+    right: 0;
+    bottom: 36px;
+  }
+  .bettors-strip {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .bettors-section {
+    padding: 75px 0;
+  }
+  .bettors-tools,
+  .bettors-steps {
+    grid-template-columns: 1fr;
+  }
+  .bettors-tool {
+    min-height: 0;
+  }
+  .bettors-dashboard {
+    min-height: 320px;
+    padding: 25px;
+  }
+  .dashboard-score {
+    margin-top: 42px;
+  }
+  .dashboard-score strong {
+    font-size: 52px;
+  }
+  .dashboard-labels {
+    gap: 18px;
+  }
+  .bettors-footer .bettors-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .bettors-footer-links {
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *:before,
+  *:after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
